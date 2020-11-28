@@ -1,11 +1,13 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Bravo Smart Office</title>
+	<meta charset="UTF-8">
+	<title>Bravo Smart Office</title>
 </head>
+
 <body>
-    <div style="float:left">
+	<div style="float:left">
 		<button class="button">
 			<img />
 			<div class="buttonText1">Outside Temp</div>
@@ -28,11 +30,12 @@
 		</button>
 	</div><br>
 	<div style="float:left">
-		<div class="button" id="menu_ac" style="border:1px solid;float:left" onclick="setPage('./pages/ac control.php','Air Conditioner')">					
+		<div class="button" id="menu_ac" style="border:1px solid;float:left"
+			onclick="setPage('./pages/ac control.php','Air Conditioner')">
 			<div>Air Conditioner</div>
 			<div>Temperature</div>
 			<div id="temperature">--</div>
-			<button onclick="ac_temperatureUp();ac_showTemperature();clickBtn(event)">+</button>		
+			<button onclick="ac_temperatureUp();ac_showTemperature();clickBtn(event)">+</button>
 			<button onclick="ac_temperatureDown();ac_showTemperature();clickBtn(event)">-</button>
 			<img />
 			<button onclick="ac_switch();ac_showTemperature();clickBtn(event)">on/off</button>
@@ -57,11 +60,13 @@
 			</ul>
 		</div>
 	</div><br>
-    <div style="float:left">
-		<div class="button" id="menu_light" style="border:1px solid;float:left" onclick="setPage('./pages/light control.php','Light')">
-			<img style="float:left"/>
+	<div style="float:left">
+		<div class="button" id="menu_light" style="border:1px solid;float:left"
+			onclick="setPage('./pages/light control.php','Light')">
+			<img style="float:left" />
 			<div class="buttonText1" style="float:left">Light</div>
-			<input id="intensity" type="range" value="50" onchange="change_intensity()" onclick="clickBtn(event)"></input><br>
+			<input id="intensity" type="range" value="50" onchange="change_intensity()"
+				onclick="clickBtn(event)"></input><br>
 			<button onclick="light_switch();clickBtn(event)">on/off</button>
 			<input id="curtain" type="range" value="50" onchange="control_curtain()" onclick="clickBtn(event)"></input>
 		</div>
@@ -78,4 +83,5 @@
 		</button>
 	</div>
 </body>
-</html> 
+
+</html>

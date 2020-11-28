@@ -1,9 +1,11 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Bravo Smart Office</title>
+	<meta charset="UTF-8">
+	<title>Bravo Smart Office</title>
 </head>
+
 <body>
 	<!--Got a problem here. After this page loaded, if ac is on, <div id="temperature">'s innerText should directly change into ac_temperature, but I don't know how-->
 	<div>
@@ -11,11 +13,11 @@
 		<div>Your Room</div>
 		<div>AC#1004</div>
 	</div>
-    <div id="ac panel">		
+	<div id="ac panel">
 		<div>Air Conditioner</div>
 		<div>Temperature</div>
 		<div id="temperature">--</div>
-		<button onclick="ac_temperatureUp();ac_showTemperature()">+</button>		
+		<button onclick="ac_temperatureUp();ac_showTemperature()">+</button>
 		<button onclick="ac_temperatureDown();ac_showTemperature()">-</button>
 		<img />
 		<button onclick="ac_switch();ac_showTemperature()">on/off</button>
@@ -27,4 +29,5 @@
 		<button onclick="ac_windChange(3)">wind3</button>
 	</div>
 </body>
-</html> 
+
+</html>

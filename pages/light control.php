@@ -1,16 +1,18 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Bravo Smart Office</title>
+	<meta charset="UTF-8">
+	<title>Bravo Smart Office</title>
 </head>
+
 <body>
 	<div>
 		<img />
 		<div>Your Room</div>
 		<div>L#1001</div>
 	</div>
-	<div id="light panel">	
+	<div id="light panel">
 		<img />
 		<button onclick="light_switch()">on/off</button>
 		<br>
@@ -20,4 +22,5 @@
 		<br>
 	</div>
 </body>
-</html> 
+
+</html>

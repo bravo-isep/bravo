@@ -18,8 +18,8 @@
 			<td>MANAGEMENT</td>
 		</tr>
 		<?php
-			for ($i=0; $i<=3; $i++){
-				echo('
+            for ($i=0; $i<=3; $i++) {
+                echo('
 					<tr>
 						<td>AC#1001</td>
 						<td>Air Conditioner 1</td>
@@ -30,8 +30,8 @@
 						</td>
 					</tr>
 				');
-			}
-		?>
+            }
+        ?>
 		<tr>
 			<td><input></input></td>
 			<td><input></input></td>

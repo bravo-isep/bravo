@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
 </head>
+
 <body>
     <div id="login">
         <form method="post">
@@ -13,9 +15,10 @@
         </form>
     </div>
     <script>
-        if (true) {  //if user information verified by server
+        if (true) { //if user information verified by server
             window.location.href = './index.php';
         }
     </script>
 </body>
-</html>  
+
+</html>
