@@ -23,8 +23,8 @@
 			<td>NAME</td>
 		</tr>
 		<?php
-			for ($i=0; $i<=6; $i++){
-				echo('
+            for ($i=0; $i<=6; $i++) {
+                echo('
 					<tr>
 						<td>15/09/2020</td>
 						<td>36.8°C</td>
@@ -32,8 +32,8 @@
 						<td>Jack</td>
 					</tr>
 				');
-			}
-		?>
+            }
+        ?>
 	</table>
 </body>
 </html> 

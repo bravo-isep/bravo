@@ -2,8 +2,7 @@ function ac_showTemperature() {
     tem = document.getElementById("temperature").innerText;
     if (ac_is_on == 1) {
         document.getElementById("temperature").innerText = ac_temperature;
-    }
-    else {
+    } else {
         document.getElementById("temperature").innerText = "--";
     }
 }

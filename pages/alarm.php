@@ -23,8 +23,8 @@
 			<td>ROOM</td>
 		</tr>
 		<?php
-			for ($i=0; $i<=3; $i++){
-				echo('
+            for ($i=0; $i<=3; $i++) {
+                echo('
 					<tr>
 						<td>15/09/2020</td>
 						<td>273,444/cc</td>
@@ -32,8 +32,8 @@
 						<td>Room 601</td>
 					</tr>
 				');
-			}
-		?>
+            }
+        ?>
 	</table>
 </body>
 </html> 

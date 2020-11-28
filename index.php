@@ -33,10 +33,14 @@
         }
 
         function findDevice() {
-            alert("New device found"); //maybe automatically fill the device table's last<tr> with the information of the new device...whatever
+            alert(
+                "New device found"
+            ); //maybe automatically fill the device table's last<tr> with the information of the new device...whatever
         }
 
-        function clickBtn(event) //When a small button on a big button, I click the small one but the "onclick" of the big one will also react, this function is to stop it.
+        function clickBtn(
+            event
+        ) //When a small button on a big button, I click the small one but the "onclick" of the big one will also react, this function is to stop it.
         {
             event = event ? event : window.event;
             event.stopPropagation();
@@ -60,7 +64,8 @@
     <!--side menu-->
     <div id="side menu" style="border: 1px solid;float:left">
         <button type="button" onclick="setPage('./pages/main menu.php','Menu')">Menu</button><br>
-        <button type="button" onclick="setPage('./pages/room select.php', 'Air Conditioner')">Air Conditioner</button><br>
+        <button type="button" onclick="setPage('./pages/room select.php', 'Air Conditioner')">Air
+            Conditioner</button><br>
         <button type="button" onclick="setPage('./pages/room select.php','Light')">Light</button><br>
         <button type="button" onclick="setPage('./pages/room select.php','Security')">Security</button><br>
         <button type="button" onclick="setPage('./pages/health.php','Health')">Health</button><br>

@@ -18,8 +18,8 @@
 			<td>MANAGEMENT</td>
 		</tr>
 		<?php
-			for ($i=0; $i<=3; $i++){
-				echo('
+            for ($i=0; $i<=3; $i++) {
+                echo('
 					<tr>
 						<td>AC#1001</td>
 						<td>331234</td>
@@ -27,8 +27,8 @@
 						<td><button class="delete">Delete</button></td>
 					</tr>
 				');
-			}
-		?>
+            }
+        ?>
 		<tr>
 			<td><input></input></td>
 			<td><input></input></td>
