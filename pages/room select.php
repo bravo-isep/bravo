@@ -18,7 +18,7 @@
 		$roomDevice=$_GET['roomdevice'];
 		if($roomDevice == "1"){
 			echo ('
-					<button class="button" onclick="setPage(\'/pages/ac control.php\',\'Air Conditioner\')">
+					<button class="button" onclick="setPage(\'./pages/ac control.php\',\'Air Conditioner\')">
 						<img />
 						<div class="buttonText1">your room</div>
 						<div class="buttonText2">AC#1004</div>
@@ -27,7 +27,7 @@
 		}
 		else if($roomDevice == "2"){
 			echo ('
-					<button class="button" onclick="setPage(\'/pages/light control.php\',\'Light\')">
+					<button class="button" onclick="setPage(\'./pages/light control.php\',\'Light\')">
 						<img />
 						<div class="buttonText1">your room</div>
 						<div class="buttonText2">L#1001</div>
@@ -46,7 +46,7 @@
 		for ($i=0; $i<=10; $i++){//Change the loop condition into traversing the database of the device
 			if ($roomDevice == "1"){
 				echo ('
-						<button class="button" onclick="setPage(\'/pages/ac control.php\',\'Air Conditioner\')">
+						<button class="button" onclick="setPage(\'./pages/ac control.php\',\'Air Conditioner\')">
 							<img />
 							<div class="buttonText1">room 601</div>
 							<div class="buttonText2">AC#1001</div>
@@ -55,7 +55,7 @@
 			}
 			elseif ($roomDevice == "2") {
 				echo ('
-						<button class="button" onclick="setPage(\'/pages/light control.php\',\'Light\')">
+						<button class="button" onclick="setPage(\'./pages/light control.php\',\'Light\')">
 							<img />
 							<div class="buttonText1">room 601</div>
 							<div class="buttonText2">L#1001</div>
@@ -64,7 +64,7 @@
 			}
 			elseif ($roomDevice == "3") {
 				echo ('
-						<button class="button" onclick="setPage(\'/pages/alarm.php\',\'Security\')">
+						<button class="button" onclick="setPage(\'./pages/alarm.php\',\'Security\')">
 							<img />
 							<div class="buttonText1">room 601</div>
 							<div class="buttonText2">Smoke Detector</div>
@@ -75,7 +75,7 @@
 		//this button is for adding new devices, has nothing to do with the database.
 		echo ('
 				<br>
-				<button class="button" onclick="setPage(\'/pages/device management.php\',\'Manage\')">
+				<button class="button" onclick="setPage(\'./pages/device management.php\',\'Manage\')">
 					add device
 				</button>
 			');
