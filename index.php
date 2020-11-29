@@ -5,6 +5,8 @@
     <!--test by zhongjiquan-->
     <meta charset="utf-8">
     <title>Bravo Smart Office</title>
+	<link rel="stylesheet" type="text/css" href="./pages/default.css" />
+	<link rel="stylesheet" type="text/css" href="./pages/unique.css" />
     <script>
         // maybe I should put these codes into a js file?
 
@@ -63,13 +65,13 @@
 
     <!--side menu-->
     <div id="side menu" style="border: 1px solid;float:left">
-        <button type="button" onclick="setPage('./pages/main menu.php','Menu')">Menu</button><br>
-        <button type="button" onclick="setPage('./pages/room select.php', 'Air Conditioner')">Air
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/main menu.php','Menu')">Menu</button><br>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/room select.php', 'Air Conditioner')">Air
             Conditioner</button><br>
-        <button type="button" onclick="setPage('./pages/room select.php','Light')">Light</button><br>
-        <button type="button" onclick="setPage('./pages/room select.php','Security')">Security</button><br>
-        <button type="button" onclick="setPage('./pages/health.php','Health')">Health</button><br>
-        <button type="button" onclick="setPage('./pages/manage.php','Manage')">Manage</button>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/room select.php','Light')">Light</button><br>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/room select.php','Security')">Security</button><br>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/health.php','Health')">Health</button><br>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/manage.php','Manage')">Manage</button>
         <!--this button won't show if authorityLevel is 1-->
     </div>
 
