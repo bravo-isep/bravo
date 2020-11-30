@@ -60,11 +60,11 @@
     <div id="header" style="border: 1px solid;">
         <div id="name" style="float:left"></div>
         <div id="user" style="text-align:right"></div>
-        <button id="signout" style="float:right" onclick="window.location.href='pages/login.php'">Sign out</button>
+        <button id="signout" style="float:right" onclick="window.location.href='./pages/login.php'">Sign out</button>
     </div>
 
     <!--side menu-->
-    <div id="side menu" style="border: 1px solid;float:left">
+    <div id="side_menu" style="border: 1px solid;float:left">
         <button class="side_menu_button" type="button" onclick="setPage('./pages/main menu.php','Menu')">Menu</button><br>
         <button class="side_menu_button" type="button" onclick="setPage('./pages/room select.php', 'Air Conditioner')">Air
             Conditioner</button><br>
@@ -76,7 +76,7 @@
     </div>
 
     <!--main part-->
-    <div id="main part" style="float:left"></div>
+    <div id="main_part" style="float:left"></div>
 
     <!--set default page-->
     <script>

@@ -12,7 +12,7 @@
 		<div>Your Room</div>
 		<div>L#1001</div>
 	</div>
-	<div id="light panel">
+	<div id="light_panel">
 		<img />
 		<button onclick="light_switch()">on/off</button>
 		<br>
