@@ -16,7 +16,7 @@
     </div>
     <script>
         if (true) { //if user information verified by server
-            window.location.href = './index.php';
+            window.location.href = '../index.php';
         }
     </script>
 </body>

@@ -13,7 +13,7 @@
 		<div>Your Room</div>
 		<div>AC#1004</div>
 	</div>
-	<div id="ac panel">
+	<div id="ac_panel">
 		<div>Air Conditioner</div>
 		<div>Temperature</div>
 		<div id="temperature">--</div>

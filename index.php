@@ -5,6 +5,8 @@
     <!--test by zhongjiquan-->
     <meta charset="utf-8">
     <title>Bravo Smart Office</title>
+	<link rel="stylesheet" type="text/css" href="./pages/default.css" />
+	<link rel="stylesheet" type="text/css" href="./pages/unique.css" />
     <script>
         // maybe I should put these codes into a js file?
 
@@ -58,23 +60,23 @@
     <div id="header" style="border: 1px solid;">
         <div id="name" style="float:left"></div>
         <div id="user" style="text-align:right"></div>
-        <button id="signout" style="float:right" onclick="window.location.href='pages/login.php'">Sign out</button>
+        <button id="signout" style="float:right" onclick="window.location.href='./pages/login.php'">Sign out</button>
     </div>
 
     <!--side menu-->
-    <div id="side menu" style="border: 1px solid;float:left">
-        <button type="button" onclick="setPage('./pages/main menu.php','Menu')">Menu</button><br>
-        <button type="button" onclick="setPage('./pages/room select.php', 'Air Conditioner')">Air
+    <div id="side_menu" style="border: 1px solid;float:left">
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/main menu.php','Menu')">Menu</button><br>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/room select.php', 'Air Conditioner')">Air
             Conditioner</button><br>
-        <button type="button" onclick="setPage('./pages/room select.php','Light')">Light</button><br>
-        <button type="button" onclick="setPage('./pages/room select.php','Security')">Security</button><br>
-        <button type="button" onclick="setPage('./pages/health.php','Health')">Health</button><br>
-        <button type="button" onclick="setPage('./pages/manage.php','Manage')">Manage</button>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/room select.php','Light')">Light</button><br>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/room select.php','Security')">Security</button><br>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/health.php','Health')">Health</button><br>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/manage.php','Manage')">Manage</button>
         <!--this button won't show if authorityLevel is 1-->
     </div>
 
     <!--main part-->
-    <div id="main part" style="float:left"></div>
+    <div id="main_part" style="float:left"></div>
 
     <!--set default page-->
     <script>

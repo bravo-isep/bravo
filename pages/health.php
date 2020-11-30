@@ -12,7 +12,7 @@
 		<div class="buttonText1">report</div>
 		<div class="buttonText2">illness</div>
 	</button>
-	<div id="Covid-19 Notice" style="border:1px solid;text-align:center;">COVID-19 epidemic period<br>Please follow the
+	<div id="Covid19_Notice" style="border:1px solid;text-align:center;">COVID-19 epidemic period<br>Please follow the
 		company's epidemic prevention measures<br>and take care of yourself<br>
 	</div>
 	<button class="button">

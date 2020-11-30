@@ -15,7 +15,7 @@ function loadPage(page, name) {
     }
     xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            document.getElementById("main part").innerHTML = xmlhttp.responseText;
+            document.getElementById("main_part").innerHTML = xmlhttp.responseText;
         }
     };
     //this three use the same page "room select.php", the codes following is to distinguish them
