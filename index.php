@@ -51,20 +51,20 @@
     <script type="text/javascript" src="./js/page.js"></script>
 </head>
 
-<body>
+<body bgcolor="#2B3331">
 
     <!--logo-->
-    <div id="logo" style="border: 1px solid;float:left;">Bravo</div>
+    <img id="logo" style="float:left;" src="./image/logo.png"/>
 
     <!--header-->
-    <div id="header" style="border: 1px solid;">
+    <div id="header">
         <div id="name" style="float:left"></div>
         <div id="user" style="text-align:right"></div>
         <button id="signout" style="float:right" onclick="window.location.href='./pages/login.php'">Sign out</button>
     </div>
 
     <!--side menu-->
-    <div id="side_menu" style="border: 1px solid;float:left">
+    <div id="side_menu" style="float:left">
         <button class="side_menu_button" type="button" onclick="setPage('./pages/main menu.php','Menu')">Menu</button><br>
         <button class="side_menu_button" type="button" onclick="setPage('./pages/room select.php', 'Air Conditioner')">Air
             Conditioner</button><br>

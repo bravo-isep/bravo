@@ -1,7 +1,14 @@
-div{
-	background-color:white;
+body{	
+	color: white;
 }
-.button{
+.button{	
+	color: white;
+	background-color: #3BCE70;
 }
-.side_menu_button{
+.button div{
+	background-color: #3BCE70;
+}
+.side_menu_button{	
+	color: white;
+	background-color: #002219;
 }

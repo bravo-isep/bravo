@@ -1,4 +1,20 @@
-#header{	
+#header{
+	height: 60px;	
+	background-color: #002219;
+}
+#header div{
+	height: 60px;	
+	background-color: #002219;
 }
 #side_menu{
+	width: 200px;
+	background-color: #002219;
+}
+#menu_notice{
+	background-color: white;
+	color: black;
+}
+#menu_notice div{
+	background-color: white;
+	color: black;
 }

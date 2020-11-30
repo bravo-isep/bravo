@@ -30,7 +30,7 @@
 		</button>
 	</div><br>
 	<div style="float:left">
-		<div class="button" id="menu_ac" style="border:1px solid;float:left"
+		<div class="button" id="menu_ac" style="float:left"
 			onclick="setPage('./pages/ac control.php','Air Conditioner')">
 			<div>Air Conditioner</div>
 			<div>Temperature</div>
@@ -48,7 +48,7 @@
 			<button onclick="ac_windChange(2);clickBtn(event)">wind2</button>
 			<button onclick="ac_windChange(3);clickBtn(event)">wind3</button>
 		</div>
-		<div class="button" id="menu_ac" style="border:1px solid;float:left">
+		<div class="button" id="menu_notice" style="float:left">
 			<div>Notice</div>
 			<ul style="height:100px;overflow:scroll">
 				<li>[13/09/2020]The office has been disinfected today.</li>
@@ -61,7 +61,7 @@
 		</div>
 	</div><br>
 	<div style="float:left">
-		<div class="button" id="menu_light" style="border:1px solid;float:left"
+		<div class="button" id="menu_light" style="float:left"
 			onclick="setPage('./pages/light control.php','Light')">
 			<img style="float:left" />
 			<div class="buttonText1" style="float:left">Light</div>
