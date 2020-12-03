@@ -63,11 +63,11 @@
 
     <!--side menu-->
     <div id="side menu" style="border: 1px solid;float:left">
-        <button type="button" onclick="setPage('./pages/main menu.php','Menu')">Menu</button><br>
-        <button type="button" onclick="setPage('./pages/room select.php', 'Air Conditioner')">Air
+        <button type="button" onclick="setPage('./pages/main_menu.php','Menu')">Menu</button><br>
+        <button type="button" onclick="setPage('./pages/room_select.php', 'Air Conditioner')">Air
             Conditioner</button><br>
-        <button type="button" onclick="setPage('./pages/room select.php','Light')">Light</button><br>
-        <button type="button" onclick="setPage('./pages/room select.php','Security')">Security</button><br>
+        <button type="button" onclick="setPage('./pages/room_select.php','Light')">Light</button><br>
+        <button type="button" onclick="setPage('./pages/room_select.php','Security')">Security</button><br>
         <button type="button" onclick="setPage('./pages/health.php','Health')">Health</button><br>
         <button type="button" onclick="setPage('./pages/manage.php','Manage')">Manage</button>
         <!--this button won't show if authorityLevel is 1-->
@@ -78,10 +78,10 @@
 
     <!--set default page-->
     <script>
-        setPage('./pages/main menu.php', 'Menu', employeeName);
+        setPage('./pages/main_menu.php', 'Menu', employeeName);
     </script>
-    <script type="text/javascript" src="./js/ac control.js"></script>
-    <script type="text/javascript" src="./js/light control.js"></script>
+    <script type="text/javascript" src="./js/ac_control.js"></script>
+    <script type="text/javascript" src="./js/light_control.js"></script>
 
 </body>
 
