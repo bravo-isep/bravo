@@ -13,7 +13,7 @@
         //variables for index
         var employeeName = "Employee"
         var employeeNumber = 331054;
-        var authorityLevel = 1; //1:Employee 2:Manager 3:Admininstrator		
+        var authorityLevel = 1; //1:Employee 2:Manager 3:Administrator		
         //variables for ac control.php
         var ac_is_on = 0;
         var ac_temperature = 27;
