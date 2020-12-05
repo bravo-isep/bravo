@@ -4,6 +4,7 @@
 <head>
     <!--test by zhongjiquan-->
     <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bravo Smart Office</title>
 	<link rel="stylesheet" type="text/css" href="./pages/default.css" />
 	<link rel="stylesheet" type="text/css" href="./pages/unique.css" />

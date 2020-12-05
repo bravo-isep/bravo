@@ -6,7 +6,7 @@
 </head>
 <body>
 	<div>
-		<img />
+		<img src="./image/1.png" />
 		<div>Device</div>
 		<div>Management</div>
 	</div>
@@ -40,7 +40,7 @@
 		</tr>
 	</table>
 	<button class="button" onclick="findDevice()">
-		<img />
+		<img src="./image/1.png" />
 		<div class="buttonText1">find</div>
 		<div class="buttonText2">New Device</div>
 	</button>

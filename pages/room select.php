@@ -19,7 +19,7 @@
         if ($roomDevice == "1") {
             echo('
 					<button class="button" onclick="setPage(\'./pages/ac control.php\',\'Air Conditioner\')">
-						<img />
+						<img src="./image/1.png" />
 						<div class="buttonText1">your room</div>
 						<div class="buttonText2">AC#1004</div>
 					</button><br>
@@ -27,7 +27,7 @@
         } elseif ($roomDevice == "2") {
             echo('
 					<button class="button" onclick="setPage(\'./pages/light control.php\',\'Light\')">
-						<img />
+						<img src="./image/1.png" />
 						<div class="buttonText1">your room</div>
 						<div class="buttonText2">L#1001</div>
 					</button><br>
@@ -35,7 +35,7 @@
         } elseif ($roomDevice == "3") {
             echo('
 					<button class="button" onclick="sendAlarm()">
-						<img />
+						<img src="./image/1.png" />
 						<div class="buttonText1">click here to</div>
 						<div class="buttonText2">ALARM!</div>
 					</button><br>
@@ -45,7 +45,7 @@
             if ($roomDevice == "1") {
                 echo('
 						<button class="button" onclick="setPage(\'./pages/ac control.php\',\'Air Conditioner\')">
-							<img />
+							<img src="./image/1.png" />
 							<div class="buttonText1">room 601</div>
 							<div class="buttonText2">AC#1001</div>
 						</button>
@@ -53,7 +53,7 @@
             } elseif ($roomDevice == "2") {
                 echo('
 						<button class="button" onclick="setPage(\'./pages/light control.php\',\'Light\')">
-							<img />
+							<img src="./image/1.png" />
 							<div class="buttonText1">room 601</div>
 							<div class="buttonText2">L#1001</div>
 						</button>
@@ -61,7 +61,7 @@
             } elseif ($roomDevice == "3") {
                 echo('
 						<button class="button" onclick="setPage(\'./pages/alarm.php\',\'Security\')">
-							<img />
+							<img src="./image/1.png" />
 							<div class="buttonText1">room 601</div>
 							<div class="buttonText2">Smoke Detector</div>
 						</button>

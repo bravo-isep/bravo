@@ -9,7 +9,7 @@
 <body>
 	<!--Got a problem here. After this page loaded, if ac is on, <div id="temperature">'s innerText should directly change into ac_temperature, but I don't know how-->
 	<div>
-		<img />
+		<img src="./image/1.png" />
 		<div>Your Room</div>
 		<div>AC#1004</div>
 	</div>
@@ -19,7 +19,7 @@
 		<div id="temperature">--</div>
 		<button onclick="ac_temperatureUp();ac_showTemperature()">+</button>
 		<button onclick="ac_temperatureDown();ac_showTemperature()">-</button>
-		<img />
+		<img src="./image/1.png" />
 		<button onclick="ac_switch();ac_showTemperature()">on/off</button>
 		<button onclick="ac_modeChange(1)">mode1</button>
 		<button onclick="ac_modeChange(2)">mode2</button>

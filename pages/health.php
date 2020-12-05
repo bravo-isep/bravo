@@ -8,7 +8,7 @@
 
 <body>
 	<button class="button" onclick="reportIllness()">
-		<img />
+		<img src="./image/1.png" />
 		<div class="buttonText1">report</div>
 		<div class="buttonText2">illness</div>
 	</button>
@@ -16,16 +16,16 @@
 		company's epidemic prevention measures<br>and take care of yourself<br>
 	</div>
 	<button class="button">
-		<img />
+		<img src="./image/1.png" />
 		<div class="buttonText1">epidemic<br>prevention<br>measures</div>
 	</button>
 	<button class="button" onclick="setPage('./pages/body temperature.php','Health')">
-		<img />
+		<img src="./image/1.png" />
 		<div class="buttonText1">your temperature</div>
 		<div class="buttonText2">36.8°C</div>
 	</button>
 	<button class="button">
-		<img />
+		<img src="./image/1.png" />
 		<div class="buttonText1">Remote Control</div>
 		<div class="buttonText2">Elevator</div>
 	</button>

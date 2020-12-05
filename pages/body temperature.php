@@ -6,12 +6,12 @@
 </head>
 <body>
 	<div>
-		<img />
+		<img src="./image/1.png" />
 		<div>Your body temperature</div>
 		<div>36.8°C</div>
 	</div>
 	<button class="button" onclick="reportIllness()">
-		<img />
+		<img src="./image/1.png" />
 		<div class="buttonText1">report</div>
 		<div class="buttonText2">illness</div>
 	</button>

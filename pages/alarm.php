@@ -6,12 +6,12 @@
 </head>
 <body>
 	<div>
-		<img />
+		<img src="./image/1.png" />
 		<div>Room 601</div>
 		<div>Smoke Detector</div>
 	</div>
 	<button class="button" onclick="sendAlarm()">
-		<img />
+		<img src="./image/1.png" />
 		<div class="buttonText1">click here to</div>
 		<div class="buttonText2">ALARM!</div>
 	</button>
