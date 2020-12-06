@@ -47,6 +47,6 @@
 }
 
 $conn->close();
-	
+?>	
 </body>
 </html> 
