@@ -23,17 +23,32 @@
 			<td>NAME</td>
 		</tr>
 		<?php
-            for ($i=0; $i<=6; $i++) {
-                echo('
-					<tr>
-						<td>15/09/2020</td>
-						<td>36.8°C</td>
-						<td>331234</td>
-						<td>Jack</td>
-					</tr>
-				');
-            }
-        ?>
-	</table>
+		$servername = "localhost";
+                $username = "bravo";
+                $password = "%K9dyF%RTj?%K=peUWeDpZj.";
+                $dbname = "bravo";
+
+                // Create connection
+                $conn = new mysqli($servername, $username, $password, $dbname);
+                // Check connection
+                if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                                           }
+		$sql = "SELECT iduser, username FROM user";
+		$result = $conn->query($sql);
+		
+		if ($result->num_rows > 0) {
+    echo "<table><tr><th>Employee Number</th><th>Name</th></tr>";
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "<tr><td>" . $row["iduser"]. "</td><td>" . $row["username"]. "</td></tr>";
+    }
+    echo "</table>";
+} else {
+    echo "0 results";
+}
+
+$conn->close();
+	
 </body>
 </html> 
