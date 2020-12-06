@@ -22,15 +22,15 @@
 		<div class="buttonText1">CO2</div>
 		<div class="buttonText2">82%</div>
 	</button>
-	<button class="button" style="background-color:#E87C44;">
+	<button class="button" id="energy">
 		<img src="./image/1.png" />
-		<div class="buttonText1" style="background-color:#E87C44;">Energy</div>
-		<div class="buttonText2" style="background-color:#E87C44;">55kWh</div>
+		<div class="buttonText1">Energy</div>
+		<div class="buttonText2">55kWh</div>
 	</button>
 	<div class="button" id="menu_ac" style="float:left"
 		onclick="setPage('./pages/ac control.php','Air Conditioner')">
-		<div>Air Conditioner</div>
-		<div>Temperature</div>
+		<div id="ac_text1">Air Conditioner</div>
+		<div id="ac_text2">Temperature</div>
 		<div id="temperature">--</div>
 		<button onclick="ac_temperatureUp();ac_showTemperature();clickBtn(event)">+</button>
 		<button onclick="ac_temperatureDown();ac_showTemperature();clickBtn(event)">-</button>
@@ -74,7 +74,7 @@
 		<img src="./image/1.png" />
 		<div class="buttonText1">Health</div>
 		<div class="buttonText2">NORMAL</div>
-		<div class="buttonText3" style="transform: scale(0.5);">COVID-19 Options</div>
+		<div class="buttonText3">COVID-19 Options</div>
 	</button>
 </body>
 

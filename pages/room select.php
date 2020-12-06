@@ -18,7 +18,7 @@
         $roomDevice=$_GET['roomdevice'];
         if ($roomDevice == "1") {
             echo('
-					<button class="button" onclick="setPage(\'./pages/ac control.php\',\'Air Conditioner\')">
+					<button class="button" id="ac_your_room" onclick="setPage(\'./pages/ac control.php\',\'Air Conditioner\')">
 						<img src="./image/1.png" />
 						<div class="buttonText1">your room</div>
 						<div class="buttonText2">AC#1004</div>
@@ -26,7 +26,7 @@
 				');
         } elseif ($roomDevice == "2") {
             echo('
-					<button class="button" onclick="setPage(\'./pages/light control.php\',\'Light\')">
+					<button class="button" id="light_your_room" onclick="setPage(\'./pages/light control.php\',\'Light\')">
 						<img src="./image/1.png" />
 						<div class="buttonText1">your room</div>
 						<div class="buttonText2">L#1001</div>
@@ -34,7 +34,7 @@
 				');
         } elseif ($roomDevice == "3") {
             echo('
-					<button class="button" onclick="sendAlarm()">
+					<button class="button" id="send_alarm" onclick="sendAlarm()">
 						<img src="./image/1.png" />
 						<div class="buttonText1">click here to</div>
 						<div class="buttonText2">ALARM!</div>
@@ -71,8 +71,8 @@
         //this button is for adding new devices, has nothing to do with the database.
         echo('
 				<br>
-				<button class="button" onclick="setPage(\'./pages/device management.php\',\'Manage\')">
-					add device
+				<button class="button" id="add_device" onclick="setPage(\'./pages/device management.php\',\'Manage\')">
+				<img src="./image/1.png" />
 				</button>
 			');
     ?>
