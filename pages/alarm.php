@@ -1,4 +1,13 @@
-﻿<!DOCTYPE html>
+﻿<?php 
+include_once 'connection.php';
+include_once 'UtilityFunctions.php';
+$pdoConnection = OpenConnection();
+$utilityFunction =  new UtilityFunctions($pdoConnection);
+$alarms = $utilityFunction->getAlarms();
+$rooms = $utilityFunction ->getRooms();
+$sensors = $utilityFunction ->getSensors();
+?>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -23,7 +32,7 @@
 			<td>ROOM</td>
 		</tr>
 		<?php
-            for ($i=0; $i<=3; $i++) {
+            foreach ($alarms as $alarm) {
                 echo('
 					<tr>
 						<td>15/09/2020</td>
