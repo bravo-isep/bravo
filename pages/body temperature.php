@@ -17,8 +17,6 @@
 	</button>
 	<table border="1"><!--Don't let those Level-1 see this table-->
 		<tr>
-			<td>DATE(DD/MM/YYYY)</td>
-			<td>TEMPERATURE</td>
 			<td>EMPLOYEE NUMBER</td>
 			<td>NAME</td>
 		</tr>
