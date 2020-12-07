@@ -1,9 +1,9 @@
-function setPage(page, name, employee_name = employeeName) {
-    loadPage(page, name); //change the page in the main part
+function setPage(page, name, room, employee_name = employeeName) {
+    loadPage(page, name, room); //change the page in the main part
     document.getElementById("name").innerText = name; //change the text in the header
     document.getElementById("user").innerText = employee_name; //change username
 }
-function loadPage(page, name) {
+function loadPage(page, name, room) {
     //refresh only the main part
     var xmlhttp;
     if (window.XMLHttpRequest) {
@@ -20,12 +20,13 @@ function loadPage(page, name) {
     };
     //this three use the same page "room_select.php", the codes following is to distinguish them
     if (name == "Air_Conditioner") {
-        page = page + "?roomdevice=1";
+        page = page + "?roomdevice=1&roomid=" + room;
     } else if (name == "Light") {
-        page = page + "?roomdevice=2";
+        page = page + "?roomdevice=2&roomid=" + room;
     } else if (name == "Security") {
-        page = page + "?roomdevice=3";
+        page = page + "?roomdevice=3&roomid=" + room;
     }
+
     xmlhttp.open("GET", page, true);
     xmlhttp.send();
 }

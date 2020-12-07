@@ -28,7 +28,7 @@
 		<div class="buttonText2">55kWh</div>
 	</button>
 	<div class="button" id="menu_ac" style="float:left"
-		onclick="setPage('./pages/ac_control.php','Air_Conditioner')">
+		onclick="setPage('/pages/ac_control.php','Air_Conditioner','0')">
 		<div id="ac_text1">Air_Conditioner</div>
 		<div id="ac_text2">Temperature</div>
 		<div id="temperature">--</div>
@@ -57,7 +57,7 @@
 		</ul>
 	</div>
 	<div class="button" id="menu_light" style="float:left"
-		onclick="setPage('./pages/light_control.php','Light')">
+		onclick="setPage('/pages/light_control.php','Light','0')">
 		<img src="./image/1.png" style="float:left" />
 		<div class="buttonText1" style="float:left">Light</div>
 		<input id="intensity" type="range" value="50" onchange="change_intensity()"
@@ -65,12 +65,12 @@
 		<button onclick="light_switch();clickBtn(event)">on/off</button>
 		<input id="curtain" type="range" value="50" onchange="control_curtain()" onclick="clickBtn(event)"></input>
 	</div>
-	<button class="button" id="menu_security" onclick="setPage('./pages/room_select.php','Security')">
+	<button class="button" id="menu_security" onclick="setPage('/pages/room_select.php','Security','0')">
 		<img src="./image/1.png" />
 		<div class="buttonText1">Security</div>
 		<div class="buttonText2">NORMAL</div>
 	</button>
-	<button class="button" id="menu_health" onclick="setPage('./pages/health.php','Health')">
+	<button class="button" id="menu_health" onclick="setPage('/pages/health.php','Health','0')">
 		<img src="./image/1.png" />
 		<div class="buttonText1">Health</div>
 		<div class="buttonText2">NORMAL</div>
