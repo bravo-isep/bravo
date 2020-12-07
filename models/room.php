@@ -1,20 +1,11 @@
 <?php
 
-include("connect.php");
+include("user.php");
 $db = connect();
 
-function getUserRoom()
-{
-    global $db;
-    $userId = 0;
-    $sth = $db->prepare('SELECT * FROM room WHERE idroom = (SELECT idroom FROM user WHERE iduser = ?)');
-    $sth->execute(array($userId));
-    $userRoom = $sth->fetchAll(PDO::FETCH_ASSOC);
-    $sth = null;
-    return $userRoom;
-}
 
-function getRoom(){
+
+function getRooms(){
     global $db;
     $office = '6%';
     $meetingRoom = '3%';
@@ -25,3 +16,13 @@ function getRoom(){
     return $rooms;
 }
 
+function getUserRoom()
+{
+    global $db;
+    $userId = getUserId();
+    $sth = $db->prepare('SELECT * FROM room WHERE idroom = (SELECT idroom FROM user WHERE iduser = ?)');
+    $sth->execute(array($userId));
+    $userRoom = $sth->fetchAll(PDO::FETCH_ASSOC);
+    $sth = null;
+    return $userRoom;
+}

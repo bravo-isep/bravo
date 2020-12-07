@@ -7,10 +7,13 @@
 </head>
 
 <body>
+	<?php
+	$roomId = $_GET['roomid'];
+	?>
 	<div>
 		<img src="./image/1.png" />
-		<div>Your Room</div>
-		<div>L#1001</div>
+		<div><?php echo $roomId; ?></div>
+		<div><?php echo "L#$roomId"; ?></div>
 	</div>
 	<div id="light_panel">
 		<img src="./image/1.png" />

@@ -7,6 +7,10 @@
 </head>
 
 <body>
+	<?php
+	include("../models/health.php");
+    $tem = getUserTemperature(getUserId());
+	?>
 	<button class="button" id="report_illness" onclick="reportIllness()">
 		<img src="./image/1.png" />
 		<div class="buttonText1">report</div>
@@ -22,7 +26,7 @@
 	<button class="button" id="your_temperature" onclick="setPage('/pages/body_temperature.php','Health','0')">
 		<img src="./image/1.png" />
 		<div class="buttonText1">your temperature</div>
-		<div class="buttonText2">36.8°C</div>
+		<div class="buttonText2"><?php echo $tem; ?></div>
 	</button>
 	<button class="button" id="remote_control">
 		<img src="./image/1.png" />
