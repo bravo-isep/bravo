@@ -18,7 +18,7 @@
 		<div><?php echo "AC#$roomId"; ?></div>
 	</div>
 	<div id="ac_panel">
-		<div>Air_Conditioner</div>
+		<div>Air Conditioner</div>
 		<div>Temperature</div>
 		<div id="temperature">--</div>
 		<button onclick="ac_temperatureUp();ac_showTemperature()">+</button>

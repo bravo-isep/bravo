@@ -23,7 +23,7 @@
 		<img src="./image/1.png" />
 		<div class="buttonText1">epidemic<br>prevention<br>measures</div>
 	</button>
-	<button class="button" id="your_temperature" onclick="setPage('/pages/body_temperature.php','Health','0')">
+	<button class="button" id="your_temperature" onclick="setPage('./pages/body_temperature.php','Health','0')">
 		<img src="./image/1.png" />
 		<div class="buttonText1">your temperature</div>
 		<div class="buttonText2"><?php echo $tem; ?></div>
