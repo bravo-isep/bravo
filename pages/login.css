@@ -1,0 +1,60 @@
+body{
+	background: url(../image/login.png);
+	background-size: cover;
+}
+#login{
+	position:absolute;
+	margin-top: 20%;
+	margin-left: 38%;
+	width:20%;
+	height:50%;
+	border-radius: 20px;
+	background-color: #FFFFFF;
+}
+#name{
+	margin-top: 5%;
+	margin-left: 8%;
+	font-size: 2vw;
+}
+[name="u"]{
+	margin-top: 5%;
+	margin-left: 8%;
+	width:80%;
+	font-size: 1.5vw;
+	border: 2px solid;
+	border-color: #909090;
+}
+[name="p"]{
+	margin-top: 5%;
+	margin-left: 8%;
+	width:80%;
+	font-size: 1.5vw;
+	border: 2px solid;
+	border-color: #909090;
+}
+#remember_me{
+    cursor: pointer;
+	margin-top: 5%;
+	margin-left: 8%;
+	font-size: 0.8vw;
+}
+[type="submit"]{
+    cursor: pointer;
+	margin-top: 3%;
+	margin-left: 8%;
+	width:83%;
+	height:3vw;
+	font-size: 1.5vw;
+	color: #FFFFFF;
+	background-color: #353535;
+	border: none;
+}
+#forgot_password{
+	margin-top: 2%;
+	margin-right: 8%;
+	float: right;
+    cursor: pointer;
+	color: #808080;
+	background-color: #FFFFFF;
+	border: none;
+}

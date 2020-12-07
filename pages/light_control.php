@@ -8,12 +8,12 @@
 
 <body>
 	<div>
-		<img />
+		<img src="./image/1.png" />
 		<div>Your Room</div>
 		<div>L#1001</div>
 	</div>
 	<div id="light_panel">
-		<img />
+		<img src="./image/1.png" />
 		<button onclick="light_switch()">on/off</button>
 		<br>
 		<input id="intensity" type="range" value="50" onchange="change_intensity()">Light intensity</input>

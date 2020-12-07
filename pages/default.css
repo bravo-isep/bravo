@@ -1,7 +1,71 @@
-div{
-	background-color:white;
+body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+	color: white;
 }
 .button{
+	float:left;
+    cursor: pointer;
+	width: 20%;
+	height: 20%;
+    margin: 1% 2% 1% 2%;
+	color: white;
+	box-sizing: border-box;
+    border: 2px solid #3BCE70;
+	border-radius: 20px;
+	box-shadow: 3px 3px 0 0 rgba(0,0,0,0.8);
+	transition-duration: 0.2s;
+	background-color: #3BCE70;
+}
+.button:hover {
+	box-sizing: border-box;
+    border: 2px solid #79E19E;
+    background-color: #4FD57F;
+}
+.button div{
+	opacity: 1;
+}
+.button img{
+	height: 5vw;
+	width: auto;
+	float: left;
+	margin-left: 10%;
+}
+.buttonText1{
+	margin-top: 2%;
+	font-size: 1.2vw;
+}
+.buttonText2{
+	margin-top: 2%;
+	font-size: 2vw;
+	text-shadow: 1px 1px 2px #000000;
+}
+.buttonText3{
+	font-size: 0.4vw;
 }
 .side_menu_button{
+	width: 100%;
+	height: 10%;
+    cursor: pointer;
+	color: white;
+    border: none;
+	outline:0;
+	text-align: left;
+	font-size: 1.2vw;
+	transition-duration: 0.2s;
+    border: 5px solid #002219;
+	background-color: #002219;
+}
+.side_menu_button:hover {
+	box-sizing: border-box;
+    border: 5px solid #002219;
+    background-color: #234038;
+}
+.side_menu_button img{
+	height: 40%;
+	width: auto;
+	float:left;
+	margin-right: 5%;
 }
