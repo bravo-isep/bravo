@@ -19,7 +19,7 @@
 		<img src="./image/1.png" />
 		<div class="buttonText1">epidemic<br>prevention<br>measures</div>
 	</button>
-	<button class="button" id="your_temperature" onclick="setPage('./pages/body temperature.php','Health')">
+	<button class="button" id="your_temperature" onclick="setPage('./pages/body_temperature.php','Health')">
 		<img src="./image/1.png" />
 		<div class="buttonText1">your temperature</div>
 		<div class="buttonText2">36.8°C</div>

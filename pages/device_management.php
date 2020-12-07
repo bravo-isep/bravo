@@ -22,7 +22,7 @@
                 echo('
 					<tr>
 						<td>AC#1001</td>
-						<td>Air Conditioner 1</td>
+						<td>Air_Conditioner 1</td>
 						<td>Room 601</td>
 						<td>
 							<button class="delete">Delete</button>

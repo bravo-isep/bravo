@@ -7,7 +7,7 @@
 <body>
 	<div>
 		<img src="./image/1.png" />
-		<div>Your body temperature</div>
+		<div>Your body_temperature</div>
 		<div>36.8°C</div>
 	</div>
 	<button class="button" onclick="reportIllness()">

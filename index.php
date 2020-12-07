@@ -16,13 +16,13 @@
         //variables for index
         var employeeName = "Employee"
         var employeeNumber = 331054;
-        var authorityLevel = 1; //1:Employee 2:Manager 3:Admininstrator		
-        //variables for ac control.php
+        var authorityLevel = 1; //1:Employee 2:Manager 3:Administrator		
+        //variables for ac_control.php
         var ac_is_on = 0;
         var ac_temperature = 27;
         var ac_mode = 3;
         var ac_wind = 3;
-        //variables for light control.php
+        //variables for light_control.php
         var light_is_on = 0;
         var light_intensity = 50; //0~100 or same as database
         var curtain_position = 50; //too
@@ -69,11 +69,11 @@
 
     <!--side menu-->
     <div id="side_menu" style="float:left">
-        <button class="side_menu_button" type="button" onclick="setPage('./pages/main menu.php','Menu')"><img src="./image/1.png" />Menu</button><br>
-        <button class="side_menu_button" type="button" onclick="setPage('./pages/room select.php', 'Air Conditioner')"><img src="./image/1.png" />Air
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/main_menu.php','Menu')"><img src="./image/1.png" />Menu</button><br>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/room_select.php', 'Air_Conditioner')"><img src="./image/1.png" />Air
             Conditioner</button><br>
-        <button class="side_menu_button" type="button" onclick="setPage('./pages/room select.php','Light')"><img src="./image/1.png" />Light</button><br>
-        <button class="side_menu_button" type="button" onclick="setPage('./pages/room select.php','Security')"><img src="./image/1.png" />Security</button><br>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/room_select.php','Light')"><img src="./image/1.png" />Light</button><br>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/room_select.php','Security')"><img src="./image/1.png" />Security</button><br>
         <button class="side_menu_button" type="button" onclick="setPage('./pages/health.php','Health')"><img src="./image/1.png" />Health</button><br>
         <button class="side_menu_button" type="button" onclick="setPage('./pages/manage.php','Manage')"><img src="./image/1.png" />Manage</button>
         <!--this button won't show if authorityLevel is 1-->
@@ -84,10 +84,10 @@
 
     <!--set default page-->
     <script>
-        setPage('./pages/main menu.php', 'Menu', employeeName);
+        setPage('./pages/main_menu.php', 'Menu', employeeName);
     </script>
-    <script type="text/javascript" src="./js/ac control.js"></script>
-    <script type="text/javascript" src="./js/light control.js"></script>
+    <script type="text/javascript" src="./js/ac_control.js"></script>
+    <script type="text/javascript" src="./js/light_control.js"></script>
 
 </body>
 

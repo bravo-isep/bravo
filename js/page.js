@@ -18,7 +18,7 @@ function loadPage(page, name) {
             document.getElementById("main_part").innerHTML = xmlhttp.responseText;
         }
     };
-    //this three use the same page "room select.php", the codes following is to distinguish them
+    //this three use the same page "room_select.php", the codes following is to distinguish them
     if (name == "Air_Conditioner") {
         page = page + "?roomdevice=1";
     } else if (name == "Light") {
