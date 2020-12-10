@@ -1,6 +1,6 @@
 ﻿<?php 
-include_once 'connection.php';
-include_once 'UtilityFunctions.php';
+include_once '../models/connection.php';
+include_once '../models/UtilityFunctions.php';
 $pdoConnection = OpenConnection();
 $utilityFunction =  new UtilityFunctions($pdoConnection);
 $alarms = $utilityFunction->getAlarms();
