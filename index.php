@@ -69,13 +69,13 @@
 
     <!--side menu-->
     <div id="side_menu" style="float:left">
-        <button class="side_menu_button" type="button" onclick="setPage('/pages/main_menu.php','Menu','0')"><img src="./image/1.png" />Menu</button><br>
-        <button class="side_menu_button" type="button" onclick="setPage('/pages/room_select.php', 'Air_Conditioner','0')"><img src="./image/1.png" />Air
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/main_menu.php','Menu','0')"><img src="./image/1.png" />Menu</button><br>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/room_select.php', 'Air Conditioner','0')"><img src="./image/1.png" />Air
             Conditioner</button><br>
-        <button class="side_menu_button" type="button" onclick="setPage('/pages/room_select.php','Light','0')"><img src="./image/1.png" />Light</button><br>
-        <button class="side_menu_button" type="button" onclick="setPage('/pages/room_select.php','Security','0')"><img src="./image/1.png" />Security</button><br>
-        <button class="side_menu_button" type="button" onclick="setPage('/pages/health.php','Health','0')"><img src="./image/1.png" />Health</button><br>
-        <button class="side_menu_button" type="button" onclick="setPage('/pages/manage.php','Manage','0')"><img src="./image/1.png" />Manage</button>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/room_select.php','Light','0')"><img src="./image/1.png" />Light</button><br>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/room_select.php','Security','0')"><img src="./image/1.png" />Security</button><br>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/health.php','Health','0')"><img src="./image/1.png" />Health</button><br>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/manage.php','Manage','0')"><img src="./image/1.png" />Manage</button>
         <!--this button won't show if authorityLevel is 1-->
     </div>
 
@@ -84,7 +84,7 @@
 
     <!--set default page-->
     <script>
-        setPage('/pages/main_menu.php', 'Menu','0', employeeName);
+        setPage('./pages/main_menu.php', 'Menu','0', employeeName);
     </script>
     <script type="text/javascript" src="./js/ac_control.js"></script>
     <script type="text/javascript" src="./js/light_control.js"></script>

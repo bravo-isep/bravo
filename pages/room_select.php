@@ -31,7 +31,7 @@
 
 	if ($roomDevice == "1") {
 		echo ("
-					<button class=\"button\" id=\"ac_your_room\" onclick=\"setPage('/pages/ac_control.php','Air_Conditioner',$userIdRoom[0])\">
+					<button class=\"button\" id=\"ac_your_room\" onclick=\"setPage('./pages/ac_control.php','Air Conditioner',$userIdRoom[0])\">
 						<img src=\"./image/1.png\" />
 						<div class=\"buttonText1\">Your Room : $userRoomName[0]</div>
 						<div class=\"buttonText2\">AC#$userIdRoom[0]</div>
@@ -39,7 +39,7 @@
 				");
 	} elseif ($roomDevice == "2") {
 		echo ("
-					<button class=\"button\" id=\"light_your_room\" onclick=\"setPage('/pages/light_control.php','Light',$userIdRoom[0])\">
+					<button class=\"button\" id=\"light_your_room\" onclick=\"setPage('./pages/light_control.php','Light',$userIdRoom[0])\">
 						<img src=\"./image/1.png\" />
 						<div class=\"buttonText1\">Your Room : $userRoomName[0]</div>
 						<div class=\"buttonText2\">L#$userIdRoom[0]</div>
@@ -58,7 +58,7 @@
 	for ($i = 0; $i < count($rooms); $i++) { //Change the loop condition into traversing the database of the device
 		if ($roomDevice == "1") {
 			echo ("
-						<button class=\"button\" onclick=\"setPage('/pages/ac_control.php','Air_Conditioner',$idRoom[$i])\">
+						<button class=\"button\" onclick=\"setPage('./pages/ac_control.php','Air Conditioner',$idRoom[$i])\">
 							<img src=\"./image/1.png\" />
 							<div class=\"buttonText1\"> $roomName[$i] </div>
 							<div class=\"buttonText2\">AC#$idRoom[$i]</div>
@@ -66,7 +66,7 @@
 					");
 		} elseif ($roomDevice == "2") {
 			echo ("
-						<button class=\"button\" onclick=\"setPage('/pages/light_control.php','Light',$idRoom[$i])\">
+						<button class=\"button\" onclick=\"setPage('./pages/light_control.php','Light',$idRoom[$i])\">
 							<img src=\"./image/1.png\" />
 							<div class=\"buttonText1\"> $roomName[$i] </div>
 							<div class=\"buttonText2\">L#$idRoom[$i]</div>
@@ -74,7 +74,7 @@
 					");
 		} elseif ($roomDevice == "3") {
 			echo ("
-						<button class=\"button\" onclick=\"setPage('/pages/alarm.php','Security', $idRoom[$i])\">
+						<button class=\"button\" onclick=\"setPage('./pages/alarm.php','Security', $idRoom[$i])\">
 							<img src=\"./image/1.png\" />
 							<div class=\"buttonText1\"> $roomName[$i] </div>
 							<div class=\"buttonText2\">ALARM#$idRoom[$i]</div>
@@ -85,7 +85,7 @@
 	//this button is for adding new devices, has nothing to do with the database.
 	echo ("
 				<br>
-				<button class=\"button\" id=\"add_device\" onclick=\"setPage('/pages/device_management.php','Manage')\">
+				<button class=\"button\" id=\"add_device\" onclick=\"setPage('./pages/device_management.php','Manage')\">
 				<img src=\"./image/1.png\" />
 				</button>
 			");

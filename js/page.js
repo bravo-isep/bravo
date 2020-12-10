@@ -19,7 +19,7 @@ function loadPage(page, name, room) {
         }
     };
     //this three use the same page "room_select.php", the codes following is to distinguish them
-    if (name == "Air_Conditioner") {
+    if (name == "Air Conditioner") {
         page = page + "?roomdevice=1&roomid=" + room;
     } else if (name == "Light") {
         page = page + "?roomdevice=2&roomid=" + room;
