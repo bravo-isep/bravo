@@ -17,10 +17,12 @@
 			<input type="checkbox" id="remember_me">Remember me
             <button type="submit">Log in</button>
         </form>
-		<button id="forgot_password">Forgot your password?</button>
+		<a href="../pages/reset_password.php" >
+			<button id="forgot_password">Forgot your password?</button>
+		</a>
     </div>
     <script>
-        if (true) { //if user information verified by server
+        if (false) { //if user information verified by server
             window.location.href = '../index.php';
         }
     </script>
