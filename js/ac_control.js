@@ -1,9 +1,9 @@
 function ac_showTemperature() {
     tem = document.getElementById("temperature").innerText;
     if (ac_is_on == 1) {
-        document.getElementById("temperature").innerText = ac_temperature;
+        document.getElementById("temperature").innerText = ac_temperature+"°C";
     } else {
-        document.getElementById("temperature").innerText = "--";
+        document.getElementById("temperature").innerText = "";
     }
 }
 function ac_switch() {

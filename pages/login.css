@@ -8,6 +8,7 @@ body{
 	margin-left: 38%;
 	width:20%;
 	height:50%;
+	font-size: 0.8vw;
 	border-radius: 20px;
 	background-color: #FFFFFF;
 }
@@ -36,7 +37,6 @@ body{
     cursor: pointer;
 	margin-top: 5%;
 	margin-left: 8%;
-	font-size: 0.8vw;
 }
 [type="submit"]{
     cursor: pointer;
@@ -55,6 +55,7 @@ body{
 	float: right;
     cursor: pointer;
 	color: #808080;
+	font-size: 0.8vw;
 	background-color: #FFFFFF;
 	border: none;
 }

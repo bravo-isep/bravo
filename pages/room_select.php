@@ -32,7 +32,7 @@
 	if ($roomDevice == "1") {
 		echo ("
 					<button class=\"button\" id=\"ac_your_room\" onclick=\"setPage('./pages/ac_control.php','Air Conditioner',$userIdRoom[0])\">
-						<img src=\"./image/1.png\" />
+						<img src=\"./image/ac.png\" />
 						<div class=\"buttonText1\">Your Room : $userRoomName[0]</div>
 						<div class=\"buttonText2\">AC#$userIdRoom[0]</div>
 					</button><br>
@@ -40,7 +40,7 @@
 	} elseif ($roomDevice == "2") {
 		echo ("
 					<button class=\"button\" id=\"light_your_room\" onclick=\"setPage('./pages/light_control.php','Light',$userIdRoom[0])\">
-						<img src=\"./image/1.png\" />
+						<img src=\"./image/light.png\" />
 						<div class=\"buttonText1\">Your Room : $userRoomName[0]</div>
 						<div class=\"buttonText2\">L#$userIdRoom[0]</div>
 					</button><br>
@@ -48,9 +48,8 @@
 	} elseif ($roomDevice == "3") {
 		echo ("
 					<button class=\"button\" id=\"send_alarm\" onclick=\"sendAlarm()\">
-						<img src=\"./image/1.png\" />
+						<img src=\"./image/alarm.png\" />
 						<div class=\"buttonText1\">click here to ALARM!</div>
-						<div class=\"buttonText2\">ALARM#$userIdRoom[0]</div>
 					</button><br>
 				");
 	}
@@ -59,7 +58,7 @@
 		if ($roomDevice == "1") {
 			echo ("
 						<button class=\"button\" onclick=\"setPage('./pages/ac_control.php','Air Conditioner',$idRoom[$i])\">
-							<img src=\"./image/1.png\" />
+							<img src=\"./image/ac.png\" />
 							<div class=\"buttonText1\"> $roomName[$i] </div>
 							<div class=\"buttonText2\">AC#$idRoom[$i]</div>
 						</button>
@@ -67,7 +66,7 @@
 		} elseif ($roomDevice == "2") {
 			echo ("
 						<button class=\"button\" onclick=\"setPage('./pages/light_control.php','Light',$idRoom[$i])\">
-							<img src=\"./image/1.png\" />
+							<img src=\"./image/light.png\" />
 							<div class=\"buttonText1\"> $roomName[$i] </div>
 							<div class=\"buttonText2\">L#$idRoom[$i]</div>
 						</button>
@@ -75,9 +74,9 @@
 		} elseif ($roomDevice == "3") {
 			echo ("
 						<button class=\"button\" onclick=\"setPage('./pages/alarm.php','Security', $idRoom[$i])\">
-							<img src=\"./image/1.png\" />
+							<img src=\"./image/detector.png\" />
 							<div class=\"buttonText1\"> $roomName[$i] </div>
-							<div class=\"buttonText2\">ALARM#$idRoom[$i]</div>
+							<div class=\"buttonText2\">A#$idRoom[$i]</div>
 						</button>
 					");
 		}
@@ -86,7 +85,7 @@
 	echo ("
 				<br>
 				<button class=\"button\" id=\"add_device\" onclick=\"setPage('./pages/device_management.php','Manage')\">
-				<img src=\"./image/1.png\" />
+				<img src=\"./image/adddevice.png\" />
 				</button>
 			");
 	?>

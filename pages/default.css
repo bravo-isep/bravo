@@ -12,12 +12,22 @@ body{
 	height: 20%;
     margin: 1% 2% 1% 2%;
 	color: white;
+	font-size: 100%;
 	box-sizing: border-box;
     border: 2px solid #3BCE70;
 	border-radius: 20px;
 	box-shadow: 3px 3px 0 0 rgba(0,0,0,0.8);
 	transition-duration: 0.2s;
 	background-color: #3BCE70;
+}
+.page_title{
+	float:left;
+	width: 30%;
+	height: 20%;
+	margin-left:35%;
+	margin-right:35%;
+	color: white;
+	font-size: 100%;
 }
 .button:hover {
 	box-sizing: border-box;
@@ -27,23 +37,32 @@ body{
 .button div{
 	opacity: 1;
 }
+.page_title div{
+	opacity: 1;
+}
 .button img{
-	height: 5vw;
+	height: 4.8em;
 	width: auto;
 	float: left;
 	margin-left: 10%;
 }
+.page_title img{
+	height: 6em;
+	width: auto;
+	float: left;
+	margin-right: 10%;
+}
 .buttonText1{
 	margin-top: 2%;
-	font-size: 1.2vw;
+	font-size: 150%;
 }
 .buttonText2{
 	margin-top: 2%;
-	font-size: 2vw;
-	text-shadow: 1px 1px 2px #000000;
+	font-size: 230%;
+	text-shadow: 1px 1px 2px #424242;
 }
 .buttonText3{
-	font-size: 0.4vw;
+	font-size: 50%;
 }
 .side_menu_button{
 	width: 100%;
@@ -53,7 +72,7 @@ body{
     border: none;
 	outline:0;
 	text-align: left;
-	font-size: 1.2vw;
+	font-size: 160%;
 	transition-duration: 0.2s;
     border: 5px solid #002219;
 	background-color: #002219;
@@ -68,4 +87,32 @@ body{
 	width: auto;
 	float:left;
 	margin-right: 5%;
+}
+table{
+	font-size: 100%;
+	border: none;
+	color: black;
+	width: 60%;
+	margin-left: 19%;
+}
+td{
+	height: 30px;
+    background-color: white;
+}
+.add{
+	margin-left: 10%;
+	width: 30%;
+	color: white;
+	background-color: green;
+}
+.delete{
+	margin-left: 10%;
+	width: 30%;
+	color: white;
+	background-color: red;
+}
+.log{
+	margin-left: 10%;
+	width: 30%;
+	background-color: white;
 }

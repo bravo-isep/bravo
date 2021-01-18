@@ -12,13 +12,13 @@
 	$tem = getUserTemperature(getUserId());
     $All = getUserAllTemperature(getUserId());
 	?>
-	<div>
-		<img src="./image/1.png" />
-		<div>Your body_temperature</div>
-		<div><?php echo $tem; ?></div>
+	<div class="page_title">
+		<img src="./image/bodytem.png" />
+		<div class="buttonText1">Your body temperature</div>
+		<div class="buttonText2"><?php echo $tem; ?>°C</div>
 	</div>
-	<button class="button" onclick="reportIllness()">
-		<img src="./image/1.png" />
+	<button class="button" id="report_illness" onclick="reportIllness()">
+		<img src="./image/health.png" />
 		<div class="buttonText1">report</div>
 		<div class="buttonText2">illness</div>
 	</button>

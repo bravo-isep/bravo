@@ -14,13 +14,13 @@ $sensors = $utilityFunction ->getSensors();
     <title>Bravo Smart Office</title>
 </head>
 <body>
-	<div>
-		<img src="./image/1.png" />
-		<div>Room 601</div>
-		<div>Smoke Detector</div>
+	<div class="page_title">
+		<img src="./image/detector.png" />
+		<div class="buttonText2">Room 601</div>
+		<div class="buttonText2">Smoke Detector</div>
 	</div>
-	<button class="button" onclick="sendAlarm()">
-		<img src="./image/1.png" />
+	<button class="button" id="send_alarm" onclick="sendAlarm()">
+		<img src="./image/alarm.png" />
 		<div class="buttonText1">click here to</div>
 		<div class="buttonText2">ALARM!</div>
 	</button>
