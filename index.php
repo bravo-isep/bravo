@@ -62,9 +62,14 @@
 		<img id="header_icon" src="./image/1.png" />
         <div id="name" style="float:left"></div>
 		
-        <button id="signout" onclick="window.location.href='./pages/login.php'">Sign out</button>
-        <div id="user"></div>
-		<img id="user_icon" src="./image/1.png" />
+		<span id="button-list-group" style="float:right">
+			<img id="user_icon" src="./image/1.png" />
+			<div id="user"></div>
+			<span id="button-list-area"><!--This two will show after you put your mouse on the user-->
+				<button id="signout" onclick="window.location.href='./pages/login.php'">Sign out</button>
+				<button id="change_password_button" onclick="window.location.href='./pages/change_password.php'">Change password</button>
+			</span>
+		</span>
     </div>
 
     <!--side menu-->
