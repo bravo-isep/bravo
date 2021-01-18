@@ -5,10 +5,10 @@
     <title>Bravo Smart Office</title>
 </head>
 <body>
-	<div>
-		<img src="./image/1.png" />
-		<div>Authority</div>
-		<div>Management</div>
+	<div class="page_title">
+		<img src="./image/authority.png" />
+		<div class="buttonText2">Authority</div>
+		<div class="buttonText2">Management</div>
 	</div>
 	<table border="1">
 		<tr>
@@ -36,7 +36,7 @@
 				<option value ="none">None</option>
 				<option value ="total control">Total control</option>
 			</select></td>
-			<td><button class="add">add</button></td>
+			<td><button class="add">Add</button></td>
 		</tr>
 	</table>
 </body>

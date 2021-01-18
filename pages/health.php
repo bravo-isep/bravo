@@ -12,7 +12,7 @@
     $tem = getUserTemperature(getUserId());
 	?>
 	<button class="button" id="report_illness" onclick="reportIllness()">
-		<img src="./image/1.png" />
+		<img src="./image/health.png" />
 		<div class="buttonText1">report</div>
 		<div class="buttonText2">illness</div>
 	</button>
@@ -20,16 +20,16 @@
 		company's epidemic prevention measures<br>and take care of yourself<br>
 	</div>
 	<button class="button" id="epidemic_prevention">
-		<img src="./image/1.png" />
+		<img src="./image/notice.png" />
 		<div class="buttonText1">epidemic<br>prevention<br>measures</div>
 	</button>
 	<button class="button" id="your_temperature" onclick="setPage('./pages/body_temperature.php','Health','0')">
-		<img src="./image/1.png" />
+		<img src="./image/bodytem.png" />
 		<div class="buttonText1">your temperature</div>
 		<div class="buttonText2"><?php echo $tem; ?></div>
 	</button>
 	<button class="button" id="remote_control">
-		<img src="./image/1.png" />
+		<img src="./image/remote.png" />
 		<div class="buttonText1">Remote Control</div>
 		<div class="buttonText2">Elevator</div>
 	</button>

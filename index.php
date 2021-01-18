@@ -58,29 +58,28 @@
     <img id="logo" style="float:left;" src="./image/logo.png"/>
 
     <!--header-->
-    <div id="header" style="float:left">
-		<img id="header_icon" src="./image/1.png" />
-        <div id="name" style="float:left"></div>
+    <div id="header">
+		<img id="header_icon"  src="./image/header.png" />
+        <div id="name"></div>
 		
-		<span id="button-list-group" style="float:right">
-			<img id="user_icon" src="./image/1.png" />
+		<span id="button-list-group">
 			<div id="user"></div>
+			<img id="user_icon" src="./image/head.png" />
 			<span id="button-list-area"><!--This two will show after you put your mouse on the user-->
-				<button id="signout" onclick="window.location.href='./pages/login.php'">Sign out</button>
-				<button id="change_password_button" onclick="window.location.href='./pages/change_password.php'">Change password</button>
+				<button id="signout" class="side_menu_button" onclick="window.location.href='./pages/login.php'">Sign out</button>
+				<button id="change_password_button" class="side_menu_button" onclick="window.location.href='./pages/change_password.php'">Change password</button>
 			</span>
 		</span>
     </div>
 
     <!--side menu-->
     <div id="side_menu" style="float:left">
-        <button class="side_menu_button" type="button" onclick="setPage('./pages/main_menu.php','Menu','0')"><img src="./image/1.png" />Menu</button><br>
-        <button class="side_menu_button" type="button" onclick="setPage('./pages/room_select.php', 'Air Conditioner','0')"><img src="./image/1.png" />Air
-            Conditioner</button><br>
-        <button class="side_menu_button" type="button" onclick="setPage('./pages/room_select.php','Light','0')"><img src="./image/1.png" />Light</button><br>
-        <button class="side_menu_button" type="button" onclick="setPage('./pages/room_select.php','Security','0')"><img src="./image/1.png" />Security</button><br>
-        <button class="side_menu_button" type="button" onclick="setPage('./pages/health.php','Health','0')"><img src="./image/1.png" />Health</button><br>
-        <button class="side_menu_button" type="button" onclick="setPage('./pages/manage.php','Manage','0')"><img src="./image/1.png" />Manage</button>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/main_menu.php','Menu','0')"><img src="./image/menu.png" />Menu</button><br>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/room_select.php', 'Air Conditioner','0')"><img src="./image/ac.png" />Air-Con</button><br>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/room_select.php','Light','0')"><img src="./image/light.png" />Light</button><br>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/room_select.php','Security','0')"><img src="./image/security.png" />Security</button><br>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/health.php','Health','0')"><img src="./image/health.png" />Health</button><br>
+        <button class="side_menu_button" type="button" onclick="setPage('./pages/manage.php','Manage','0')"><img src="./image/manage.png" />Manage</button>
         <!--this button won't show if authorityLevel is 1-->
     </div>
 

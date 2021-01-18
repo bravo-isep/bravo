@@ -10,18 +10,21 @@
 	<?php
 	$roomId = $_GET['roomid'];
 	?>
-	<div>
-		<img src="./image/1.png" />
-		<div><?php echo $roomId; ?></div>
-		<div><?php echo "L#$roomId"; ?></div>
+	<div class="page_title">
+		<img src="./image/light.png" />
+		<div class="buttonText2"><?php echo $roomId; ?></div>
+		<div class="buttonText2"><?php echo "L#$roomId"; ?></div>
 	</div>
 	<div id="light_panel">
-		<img src="./image/1.png" />
-		<button onclick="light_switch()">on/off</button>
+		<img src="./image/light.png" />
 		<br>
-		<input id="intensity" type="range" value="50" onchange="change_intensity()">Light intensity</input>
+		<img src="./image/onoff.png" id="picturebutton" onclick="light_switch();clickBtn(event)">
 		<br>
-		<input id="curtain" type="range" value="50" onchange="control_curtain()">Curtain</input>
+		<div>Light intensity</div>
+		<input id="intensity" type="range" value="50" onchange="change_intensity()">
+		<br>
+		<div>Curtain</div>
+		<input id="curtain" type="range" value="50" onchange="control_curtain()">
 		<br>
 	</div>
 </body>

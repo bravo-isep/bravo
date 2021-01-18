@@ -5,10 +5,10 @@
     <title>Bravo Smart Office</title>
 </head>
 <body>
-	<div>
-		<img src="./image/1.png" />
-		<div>Device</div>
-		<div>Management</div>
+	<div class="page_title">
+		<img src="./image/device.png" />
+		<div class="buttonText2">Device</div>
+		<div class="buttonText2">Management</div>
 	</div>
 	<table border="1">
 		<tr>
@@ -36,11 +36,11 @@
 			<td><input></input></td>
 			<td><input></input></td>
 			<td><input></input></td>
-			<td><button class="add">add</button></td>
+			<td><button class="add">Add</button></td>
 		</tr>
 	</table>
-	<button class="button" onclick="findDevice()">
-		<img src="./image/1.png" />
+	<button class="button" id="find_new_device" onclick="findDevice()">
+		<img src="./image/device.png" />
 		<div class="buttonText1">find</div>
 		<div class="buttonText2">New Device</div>
 	</button>
