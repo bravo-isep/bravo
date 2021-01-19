@@ -1,31 +1,44 @@
 <!DOCTYPE html>
 <html>
+<?php
+$isLogin = false;
+session_start();
+if (isset($_SESSION["isLogin"]) && $_SESSION["isLogin"] === true) {
+    header('Location: ../index.php');
+    exit();
+}
+?>
 
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="stylesheet" type="text/css" href="login.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="login.css" />
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.cookie.js"></script>
+    <script src="../js/crypto.aes.js"></script>
+    <script src="../js/crypto.sha1.js"></script>
+    
+
 </head>
 
 <body>
     <div id="login">
-		<div id="name">Log In</div>
-        <form method="post">
-            <input type="text" required="required" placeholder="Employee number" name="u">
-            <input type="password" required="required" placeholder="Password" name="p">
-			<input type="checkbox" id="remember_me">Remember me
-            <button type="submit">Log in</button>
+        <div id="name">LOG IN</div>
+        <form action="" onkeydown="if(event.keyCode==13) return sub();">
+            <input type="text" required="required" placeholder="Employee number" name="u" id="user">
+            <input type="password" required="required" placeholder="Password" name="p" id="passwd">
+
+            <input type="checkbox" id="remember_me" class="checkbox">Remember me
+            <!-- <input type="checkbox" id="auto" class="checkbox" onclick="autoCheck();">Auto Login<br /> -->
+            <button type="button" id="loginButton" onclick="sub();">Log in</button>
         </form>
-		<a href="../pages/reset_password.php" >
-			<button id="forgot_password">Forgot your password?</button>
-		</a>
+        <span id="output"></span>
+        <a href="../pages/reset_password.php">
+            <button id="forgot_password">Forgot your password?</button>
+        </a>
     </div>
-    <script>
-        if (false) { //if user information verified by server
-            window.location.href = '../index.php';
-        }
-    </script>
 </body>
 
 </html>

@@ -1,61 +1,118 @@
-body{
-	background: url(../image/login.png);
-	background-size: cover;
+* {
+    outline: none;
 }
-#login{
-	position:absolute;
-	margin-top: 20%;
-	margin-left: 38%;
-	width:20%;
-	height:50%;
-	font-size: 0.8vw;
-	border-radius: 20px;
-	background-color: #FFFFFF;
+body {
+    background: url(../image/login.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #048665;
 }
-#name{
-	margin-top: 5%;
-	margin-left: 8%;
-	font-size: 2vw;
+#login {
+    position: absolute;
+    margin-top: 15%;
+    left: 50%;
+    margin-left: -10%;
+    width: 20%;
+    height: 50%;
+    font-size: 1vw;
+    border: 0px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 10px 10px 20px #19614f;
 }
-[name="u"]{
-	margin-top: 5%;
-	margin-left: 8%;
-	width:80%;
-	font-size: 1.5vw;
-	border: 2px solid;
-	border-color: #909090;
+#name {
+    margin-top: 5%;
+    margin-left: 8%;
+    font-size: 2vw;
 }
-[name="p"]{
-	margin-top: 5%;
-	margin-left: 8%;
-	width:80%;
-	font-size: 1.5vw;
-	border: 2px solid;
-	border-color: #909090;
+[name="u"] {
+    margin-top: 8%;
+    margin-left: 8%;
+    width: 80%;
+    height: 1.8vw;
+    font-size: 1.2vw;
+    border: 2px solid;
+    border-color: #909090;
+    border-radius: 10px;
 }
-#remember_me{
+[name="p"] {
+    margin-top: 8%;
+    margin-left: 8%;
+    width: 80%;
+    height: 1.8vw;
+    font-size: 1.2vw;
+    border: 2px solid;
+    border-color: #909090;
+    border-radius: 10px;
+}
+
+.checkbox {
+    width: 1vw;
+    height: 1vw;
     cursor: pointer;
-	margin-top: 5%;
-	margin-left: 8%;
 }
-[type="submit"]{
+
+#remember_me {
     cursor: pointer;
-	margin-top: 3%;
-	margin-left: 8%;
-	width:83%;
-	height:3vw;
-	font-size: 1.5vw;
-	color: #FFFFFF;
-	background-color: #353535;
-	border: none;
+    margin-top: 8%;
+    margin-left: 8%;
+    z-index: 999;
 }
-#forgot_password{
-	margin-top: 2%;
-	margin-right: 8%;
-	float: right;
+
+#forgot_password {
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    margin-left: -45%;
+    top: 93%;
     cursor: pointer;
-	color: #808080;
-	font-size: 0.8vw;
-	background-color: #FFFFFF;
-	border: none;
+    color: #808080;
+    font-size: 0.8vw;
+    background-color: #ffffff;
+    border: none;
+}
+
+#loginButton {
+    position: absolute;
+    width: 90%;
+    height: 10%;
+    left: 50%;
+    margin-left: -45%;
+    top: 70%;
+    border-radius: 20px;
+
+    background: linear-gradient(to bottom right, #2bce9a, #17c2b9);
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1.2vw;
+}
+
+#loginButton:hover {
+    background: linear-gradient(to bottom right, #17c2b9, #2bce9a);
+}
+
+#loginButton:active {
+    background: linear-gradient(to bottom right, #0f8f88, #18946d);
+}
+
+span {
+    display: block;
+    margin-bottom: 12px;
+    height: 1.2vw;
+    font-size: 1vw;
+    margin-left: 8%;
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    margin-left: -45%;
+    top: 55%;
+    text-align: center;
+}
+
+.span_red {
+    color: red;
+}
+
+.span_green {
+    color: green;
 }
