@@ -1,17 +1,11 @@
-body{
-	background: url(../image/login.png);
-	background-size: cover;
+* {
+    outline: none;
 }
-#login{
-	position:absolute;
-	margin-top: 20%;
-	margin-left: 38%;
-	width:20%;
-	height:50%;
-	font-size: 0.8vw;
-	border-radius: 20px;
-	box-shadow: 3px 3px 10px 0 rgba(0,0,0,0.4);
-	background-color: #FFFFFF;
+body {
+    background: url(../image/login.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #048665;
 }
 #login,
 #reset_password,
@@ -34,69 +28,26 @@ body{
     margin-left: 8%;
     font-size: 2vw;
 }
-[name="u"] {
-    margin-top: 8%;
-    margin-left: 8%;
-    width: 80%;
-    height: 1.8vw;
-    font-size: 1.2vw;
-    border: 2px solid;
-    border-color: #909090;
-    border-radius: 5px;
-}
-[name="p"] {
-    margin-top: 8%;
-    margin-left: 8%;
-    width: 80%;
-    height: 1.8vw;
-    font-size: 1.2vw;
-    border: 2px solid;
-    border-color: #909090;
-    border-radius: 5px;
-}
-
-[name="op"] {
-    margin-top: 5%;
-    margin-left: 8%;
-    width: 80%;
-    font-size: 1.5vw;
-    border: 2px solid;
-    border-color: #909090;
-}
-
-[name="np"] {
-    margin-top: 5%;
-    margin-left: 8%;
-    width: 80%;
-    font-size: 1.5vw;
-    border: 2px solid;
-    border-color: #909090;
-}
-
-[name="cnp"] {
-    margin-top: 5%;
-    margin-left: 8%;
-    width: 80%;
-    font-size: 1.5vw;
-    border: 2px solid;
-    border-color: #909090;
-}
-
+[name="u"],
+[name="p"],
+[name="op"],
+[name="np"],
+[name="cnp"],
 [name="e"] {
-    margin-top: 5%;
+    margin-top: 8%;
     margin-left: 8%;
     width: 80%;
-    font-size: 1.5vw;
+    height: 1.8vw;
+    font-size: 1.2vw;
     border: 2px solid;
     border-color: #909090;
+    border-radius: 5px;
 }
-[name="p"]{
-	margin-top: 5%;
-	margin-left: 8%;
-	width:80%;
-	font-size: 1.5vw;
-	border: 2px solid;
-	border-color: #909090;
+
+.checkbox {
+    width: 1vw;
+    height: 1vw;
+    cursor: pointer;
 }
 
 #remember_me {
@@ -106,13 +57,18 @@ body{
     font-size: 0.8vw;
     z-index: 999;
 }
-[name="np"]{
-	margin-top: 5%;
-	margin-left: 8%;
-	width:80%;
-	font-size: 1.5vw;
-	border: 2px solid;
-	border-color: #909090;
+
+#forgot_password {
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    margin-left: -45%;
+    top: 93%;
+    cursor: pointer;
+    color: #808080;
+    font-size: 0.8vw;
+    background-color: #ffffff;
+    border: none;
 }
 
 #loginButton,
@@ -164,30 +120,27 @@ body{
 #resetPassword:hover {
     background-color: #424242;
 }
-[type="submit"],[type="button"]{
-    cursor: pointer;
-	margin-top: 5%;
-	margin-left: 8%;
-	width:83%;
-	height:3vw;
-	font-size: 1.5vw;
-	color: #FFFFFF;
-	background-color: #353535;
-	transition-duration: 0.1s;
-	border: none;
+
+span {
+    display: block;
+    margin-bottom: 12px;
+    height: 1.2vw;
+    font-size: 1vw;
+    margin-left: 8%;
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    margin-left: -45%;
+    top: 55%;
+    text-align: center;
 }
-[type="submit"]:hover,[type="button"]:hover{
-	background-color: #424242;
+
+.span_red {
+    color: red;
 }
-#forgot_password{
-	margin-top: 2%;
-	margin-right: 8%;
-	float: right;
-    cursor: pointer;
-	color: #808080;
-	font-size: 0.8vw;
-	background-color: #FFFFFF;
-	border: none;
+
+.span_green {
+    color: green;
 }
 
 form div {

@@ -26,7 +26,7 @@
 	<button class="button" id="your_temperature" onclick="setPage('./pages/body_temperature.php','Health','0')">
 		<img src="./image/bodytem.png" />
 		<div class="buttonText1">your temperature</div>
-		<div class="buttonText2"><?php echo $tem; ?></div>
+		<div class="buttonText2"><?php echo $tem."℃"; ?></div>
 	</button>
 	<button class="button" id="remote_control">
 		<img src="./image/remote.png" />
