@@ -5,7 +5,7 @@ $db = connect();
 
 function getUserId()
 {
-    return 0;
+    return $_COOKIE['idUser'];
 }
 
 function getUser()
@@ -13,9 +13,9 @@ function getUser()
     global $db;
     $sth = $db->prepare('SELECT * FROM user');
     $sth->execute();
-    $userName = $sth->fetchAll(PDO::FETCH_ASSOC);
+    $user = $sth->fetchAll(PDO::FETCH_ASSOC);
     $sth = null;
-    return $userName;
+    return $user;
 }
 
 function getUserName($userId)
@@ -55,8 +55,8 @@ function getUserPassword($userId)
     global $db;
     $sth = $db->prepare('SELECT password FROM user WHERE iduser = ?');
     $sth->execute(array($userId));
-    $userIdRoom = $sth->fetchAll(PDO::FETCH_ASSOC);
+    $UserPassword = $sth->fetchAll(PDO::FETCH_ASSOC);
     $sth = null;
-    return $userIdRoom[0]['password'];
+    return $UserPassword[0]['password'];
 }
 

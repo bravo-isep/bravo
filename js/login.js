@@ -23,9 +23,11 @@ function check(user, passwd) {
             if (resp.success == "1") {
                 $("#output").text("success").prop("class", "span_green");
                 if ($("#remember_me").prop("checked")) {
-                    saveCookie(user, passwd);
+                    clearCookie();
+                    saveCookie(user, passwd, 1);
                 } else {
                     clearCookie();
+                    saveCookie(user, passwd, 0);
                 }
                 window.location.href = "../index.php";
                 exit;
@@ -40,16 +42,27 @@ function check(user, passwd) {
     });
 }
 
-function saveCookie(user, passwd) {
+function saveCookie(user, passwd, save) {
     $.cookie("idUser", user, {
         expires: 7,
         path: "/",
     });
-    var passwd_aes = CryptoJS.AES.encrypt(passwd, "123456").toString();
-    $.cookie("passwd", passwd_aes, {
-        expires: 7,
-        path: "/",
-    });
+    if (save === 1) {
+        var passwd_aes = CryptoJS.AES.encrypt(passwd, "123456").toString();
+        $.cookie("passwd", passwd_aes, {
+            expires: 7,
+            path: "/",
+        });
+        $.cookie("save", "1", {
+            expires: 7,
+            path: "/",
+        });
+    } else {
+        $.cookie("save", "0", {
+            expires: 7,
+            path: "/",
+        });
+    }
 }
 
 function clearCookie() {
@@ -61,13 +74,17 @@ function clearCookie() {
         expires: -1,
         path: "/",
     });
+    $.cookie("save", "", {
+        expires: -1,
+        path: "/",
+    });
 }
 
 window.onload = function () {
     idUser = $.cookie("idUser");
     passwd = $.cookie("passwd");
-    console.log(passwd);
-    if (idUser && passwd) {
+    save = $.cookie("save");
+    if (save == 1 && passwd && passwd) {
         $("#remember_me").prop("checked", true);
         $("#user").val(idUser);
         $("#passwd").val(CryptoJS.AES.decrypt(passwd, "123456").toString(CryptoJS.enc.Utf8));

@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `bravo` /*!40100 DEFAULT CHARACTER SET utf8mb4 CO
 USE `bravo`;
 -- MySQL dump 10.13  Distrib 8.0.22, for Win64 (x86_64)
 --
--- Host: 13.75.55.140    Database: bravo
+-- Host: localhost    Database: bravo
 -- ------------------------------------------------------
 -- Server version	8.0.22
 
@@ -84,7 +84,7 @@ CREATE TABLE `body_temperature_detection` (
   `idbtd` int NOT NULL,
   `idsensor` int NOT NULL,
   `iduser` int NOT NULL,
-  `tempreature` int NOT NULL,
+  `temperature` float NOT NULL,
   `time` datetime NOT NULL,
   PRIMARY KEY (`idbtd`),
   KEY `btd_idsensor_idx` (`idsensor`),
@@ -100,6 +100,7 @@ CREATE TABLE `body_temperature_detection` (
 
 LOCK TABLES `body_temperature_detection` WRITE;
 /*!40000 ALTER TABLE `body_temperature_detection` DISABLE KEYS */;
+INSERT INTO `body_temperature_detection` VALUES (0,25,0,36.2,'2021-01-20 08:03:00'),(1,25,1,37.3,'2021-01-20 09:03:00'),(2,25,2,39.8,'2021-01-20 09:09:00');
 /*!40000 ALTER TABLE `body_temperature_detection` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -237,7 +238,7 @@ CREATE TABLE `sensor` (
 
 LOCK TABLES `sensor` WRITE;
 /*!40000 ALTER TABLE `sensor` DISABLE KEYS */;
-INSERT INTO `sensor` VALUES (0,'temperature',30.2,301,'2020-12-03 09:42:01'),(1,'temperature',25.9,302,'2020-12-03 09:42:01'),(2,'temperature',15.6,601,'2020-12-03 09:42:01'),(3,'temperature',14.7,602,'2020-12-03 09:42:01'),(4,'temperature',20.7,603,'2020-12-03 09:42:01'),(5,'humidity',57.3,301,'2020-12-03 09:42:01'),(6,'humidity',57.3,302,'2020-12-03 09:42:01'),(7,'humidity',75.4,601,'2020-12-03 09:42:01'),(8,'humidity',49.6,602,'2020-12-03 09:42:01'),(9,'humidity',68,603,'2020-12-03 09:42:01'),(10,'brightness',70.8,301,'2020-12-03 09:42:01'),(11,'brightness',98.1,302,'2020-12-03 09:42:01'),(12,'brightness',57.9,601,'2020-12-03 09:42:01'),(13,'brightness',28.9,602,'2020-12-03 09:42:01'),(14,'brightness',62.4,603,'2020-12-03 09:42:01'),(15,'smoke',0,301,'2020-12-03 05:11:46'),(16,'smoke',0,302,'2020-12-03 05:11:46'),(17,'smoke',0,601,'2020-12-03 05:11:46'),(18,'smoke',0,602,'2020-12-03 05:11:47'),(19,'smoke',0,603,'2020-12-03 05:11:47'),(20,'Intrusion ',0,301,'2020-12-03 05:11:48'),(21,'Intrusion ',0,302,'2020-12-03 05:11:48'),(22,'Intrusion ',0,601,'2020-12-03 05:11:49'),(23,'Intrusion ',0,602,'2020-12-03 05:11:49'),(24,'Intrusion ',0,603,'2020-12-03 05:11:50'),(25,'body temperature',36.3,101,'2020-12-03 09:42:01');
+INSERT INTO `sensor` VALUES (0,'temperature',27.9,301,'2021-01-20 15:15:51'),(1,'temperature',28.7,302,'2021-01-20 15:15:51'),(2,'temperature',27.6,601,'2021-01-20 15:15:51'),(3,'temperature',18.5,602,'2021-01-20 15:15:51'),(4,'temperature',31.3,603,'2021-01-20 15:15:51'),(5,'humidity',20.9,301,'2021-01-20 15:15:51'),(6,'humidity',50.7,302,'2021-01-20 15:15:51'),(7,'humidity',45.2,601,'2021-01-20 15:15:51'),(8,'humidity',33.9,602,'2021-01-20 15:15:51'),(9,'humidity',42,603,'2021-01-20 15:15:51'),(10,'brightness',23.4,301,'2021-01-20 15:15:51'),(11,'brightness',36.7,302,'2021-01-20 15:15:51'),(12,'brightness',90.6,601,'2021-01-20 15:15:51'),(13,'brightness',6.7,602,'2021-01-20 15:15:51'),(14,'brightness',86.7,603,'2021-01-20 15:15:51'),(15,'smoke',0,301,'2020-12-03 05:11:46'),(16,'smoke',0,302,'2020-12-03 05:11:46'),(17,'smoke',0,601,'2020-12-03 05:11:46'),(18,'smoke',0,602,'2020-12-03 05:11:47'),(19,'smoke',0,603,'2020-12-03 05:11:47'),(20,'Intrusion ',0,301,'2020-12-03 05:11:48'),(21,'Intrusion ',0,302,'2020-12-03 05:11:48'),(22,'Intrusion ',0,601,'2020-12-03 05:11:49'),(23,'Intrusion ',0,602,'2020-12-03 05:11:49'),(24,'Intrusion ',0,603,'2020-12-03 05:11:50'),(25,'body temperature',35.7,101,'2021-01-20 15:15:51');
 /*!40000 ALTER TABLE `sensor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -268,7 +269,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (0,'employee','passwd',1,601),(1,'manager','passwd',2,602),(2,'administrator','passwd',3,603);
+INSERT INTO `user` VALUES (0,'employee','30274c47903bd1bac7633bbf09743149ebab805f',1,601),(1,'manager','30274c47903bd1bac7633bbf09743149ebab805f',2,602),(2,'administrator','30274c47903bd1bac7633bbf09743149ebab805f',3,603);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -281,4 +282,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-03 17:42:30
+-- Dump completed on 2021-01-20 23:16:02

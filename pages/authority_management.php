@@ -34,13 +34,13 @@
 			$room = getUserIdRoom($id);
 			switch(getUserLevel($id)){
 				case '1':
-                    $level = 1;
+                    $level = 'employee';
 					break;
 				case '2':
-					$level = 2;
+					$level = 'manager';
 					break;
 				case '3':
-					$level = 3;
+					$level = 'administrator';
 					break;
 				default :
                     $level = 'unknown';

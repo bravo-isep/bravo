@@ -16,17 +16,14 @@ if ($_SESSION["isLogin"] != true) {
     <title>Bravo Smart Office</title>
     <link rel="stylesheet" type="text/css" href="./pages/default.css" />
     <link rel="stylesheet" type="text/css" href="./pages/unique.css" />
+    <link rel="icon" href="./image/favicon.ico" type="image/x-icon" />
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <script src="./js/jquery.cookie.js"></script>
+    <script src="./js/getValue.js"></script>
     <script>
-        // maybe I should put these codes into a js file?
-
-        //replace most of these with data from server
 
         //variables for index
-        var employeeName = "Employee"
-        var employeeNumber = 0;
-        var authorityLevel = 1; //1:Employee 2:Manager 3:Administrator		
+
         //variables for ac_control.php
         var ac_is_on = 0;
         var ac_temperature = 27;
@@ -84,6 +81,7 @@ if ($_SESSION["isLogin"] != true) {
 
 <body bgcolor="#2B3331">
 
+
     <!--logo-->
     <img id="logo" style="float:left;" src="./image/logo.png" />
 
@@ -119,7 +117,7 @@ if ($_SESSION["isLogin"] != true) {
 
     <!--set default page-->
     <script>
-        setPage('./pages/main_menu.php', 'Menu', '0', employeeName);
+
     </script>
     <script type="text/javascript" src="./js/ac_control.js"></script>
     <script type="text/javascript" src="./js/light_control.js"></script>

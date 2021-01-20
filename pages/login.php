@@ -14,11 +14,13 @@ if (isset($_SESSION["isLogin"]) && $_SESSION["isLogin"] === true) {
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="login.css" />
+    <link rel="icon" href="../image/favicon.ico" type="image/x-icon" />  
 
     <script src="../js/jquery.min.js"></script>
     <script src="../js/jquery.cookie.js"></script>
     <script src="../js/crypto.aes.js"></script>
     <script src="../js/crypto.sha1.js"></script>
+    <script src="../js/login.js"></script>
     
 
 </head>
