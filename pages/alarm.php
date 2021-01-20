@@ -1,7 +1,7 @@
 ﻿<?php 
-include_once '../models/connection.php';
+include_once '../models/connect.php';
 include_once '../models/UtilityFunctions.php';
-$pdoConnection = OpenConnection();
+$pdoConnection = connect();
 $utilityFunction =  new UtilityFunctions($pdoConnection);
 $alarms = $utilityFunction->getAlarms();
 $rooms = $utilityFunction ->getRooms();

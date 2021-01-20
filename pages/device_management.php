@@ -4,6 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Bravo Smart Office</title>
+	<script src="./js/manage.js"></script>
 </head>
 
 <body>
@@ -12,57 +13,111 @@
 		<div class="buttonText2">Device</div>
 		<div class="buttonText2">Management</div>
 	</div>
-	<table border="1">
-		<tr>
-			<td>DEVICE ID</td>
-			<td>DEVICE TYPE</td>
-			<td>ROOM</td>
-			<td>MANAGEMENT</td>
-		</tr>
+	<table border="1" id='table'>
 		<?php
-		include_once("../models/device.php");
-		$allAc = getAc();
-		$allIdAc = array_column($allAc, "idac_sys");
-		foreach ($allIdAc as $id1) {
-			$acRoom = getAcRoom($id1);
-			echo ("
-					<tr>
-						<td>AC#$id1</td>
-						<td>Air Conditioner</td>
-						<td>Room $acRoom</td>
-						<td>
-							<button class=\"delete\">Delete</button>
-							<button class=\"log\">Log</button> <!--you can delete this, and also any other elements in any other files in order to fit the database-->
-						</td>
-					</tr>
-				");
+		$table = '';
+		$table .= "<tr>
+		<td>DEVICE ID</td>
+		<td>DEVICE TYPE</td>
+		<td>ROOM</td>
+		<td>MANAGEMENT</td>
+		</tr>";
+
+
+		//read the 'ac_sys' table and add the data to $table 
+		try {
+			header('Content-type:text/html;charset=utf-8');
+			include("../models/connect.php");
+			$db = connect();
+
+			$stmt = $db->prepare("SELECT * FROM ac_sys");
+			$stmt->execute();
+
+			$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		} catch (PDOException $e) {
+			echo "Error: " . $e->getMessage();
 		}
-		$allLight = getLight();
-		$allIdLight = array_column($allLight, "idlighting_sys");
-		foreach ($allIdLight as $id2) {
-			$lightRoom = getLightRoom($id2);
-			echo ("
-					<tr>
-						<td>L#$id2</td>
-						<td>Light</td>
-						<td>Room $lightRoom</td>
-						<td>
-							<button class=\"delete\">Delete</button>
-							<button class=\"log\">Log</button> <!--you can delete this, and also any other elements in any other files in order to fit the database-->
-						</td>
-					</tr>
-				");
+
+		if (!empty($res)) {
+			foreach ($res as $key => $value) {
+				$table .= '<tr>';
+				$table .= "<td>AC#{$value['idac_sys']}</td>";
+				$table .= "<td>AC</td>";
+				$table .= "<td>{$value['idroom']}</td>";
+				$table .= "<td><button onclick='delete_device({$value['idac_sys']}, 1)'>Delete</button><td>";
+				$table .= "</tr>";
+			}
 		}
+
+		//read the 'lighting_sys' table and add the data to $table 
+		try {
+			$stmt = $db->prepare("SELECT * FROM lighting_sys");
+			$stmt->execute();
+
+			$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		} catch (PDOException $e) {
+			echo "Error: " . $e->getMessage();
+		}
+
+		if (!empty($res)) {
+			foreach ($res as $key => $value) {
+				$table .= '<tr>';
+				$table .= "<td>Light#{$value['idlighting_sys']}</td>";
+				$table .= "<td>light</td>";
+				$table .= "<td>{$value['idroom']}</td>";
+				$table .= "<td><button onclick='delete_device({$value['idlighting_sys']}, 2)'>Delete</button><td>";
+				$table .= "</tr>";
+			}
+		}
+
+		//read the 'sensor' table and add the data to $table 
+		try {
+			$stmt = $db->prepare("SELECT * FROM sensor");
+			$stmt->execute();
+			$stmt_room = $db->prepare("SELECT * FROM room");
+			$stmt_room->execute();
+
+			$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
+			$res_room = $stmt_room->fetchAll(PDO::FETCH_ASSOC);
+		} catch (PDOException $e) {
+			echo "Error: " . $e->getMessage();
+		}
+
+		if (!empty($res)) {
+			foreach ($res as $key => $value) {
+				$table .= '<tr>';
+				$table .= "<td>Sensor#{$value['idsensor']}</td>";
+				$table .= "<td>{$value['type']}</td>";
+				$table .= "<td>{$value['idroom']}</td>";
+				$table .= "<td><button onclick='delete_device({$value['idsensor']}, 3)'>Delete</button><td>";
+				$table .= "</tr>";
+			}
+		}
+		$table .= "<form action='add.device.php' method='POST'>
+		<tr><td><input type='text' name='id_device' id='id_device'></td>
+		<td><select name='type' id='type'>
+		<option value='AC'>AC</option>
+		<option value='light'>light</option>
+		<option value='temperature'>temperature</option>
+		<option value='humidity'>humidity</option>
+		<option value='brightness'>brightness</option>
+		<option value='smoke'>smoke</option>
+		<option value='intrusion'>intrusion</option>
+		<option value='body temperature'>body temperature</option>
+		</select></td>
+		<td><select name='idroom' id='idroom'>";
+		foreach ($res_room as $key => $room) {
+			$table .= "<option value='{$room['idroom']}' >{$room['idroom']}</option>";
+		}
+		$table .= "</select></td>
+		<td><button onclick='add_device()'>Add</button></td>
+		</tr></form>";
+		echo $table;
 		?>
-		<tr>
-			<td><input></input></td>
-			<td><input></input></td>
-			<td><input></input></td>
-			<td><button class="add">Add</button></td>
-		</tr>
 	</table>
 	<button class="button" id="find_new_device" onclick="findDevice()">
 		<img src="./image/device.png" />
+		<div class="buttonText1">find</div>
 		<div class="buttonText2">New Device</div>
 	</button>
 </body>

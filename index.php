@@ -20,6 +20,7 @@ if ($_SESSION["isLogin"] != true) {
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <script src="./js/jquery.cookie.js"></script>
     <script src="./js/getValue.js"></script>
+    <script src="./js/manage.js"></script>
     <script>
 
         //variables for index
