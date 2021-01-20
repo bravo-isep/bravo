@@ -16,7 +16,7 @@
 		<div class="buttonText2"><?php echo "L#$roomId"; ?></div>
 	</div>
 	<div id="light_panel">
-		<img src="./image/light.png" />
+		<img src="./image/light.png" id = "lightPicture"/>
 		<br>
 		<img src="./image/onoff.png" id="picturebutton" onclick="light_switch();clickBtn(event)">
 		<br>

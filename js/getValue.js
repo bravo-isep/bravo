@@ -64,16 +64,17 @@ function getDevice(idRoom) {
             light_is_on = resp.Light_OnOff;
             light_intensity = resp.Light_bri;
             curtain_position = resp.Curtain_position;
+            setTimeout(ac_showTemperature(),1000);
 
-            console.log(
-                ac_is_on,
-                ac_temperature,
-                ac_wind,
-                ac_mode,
-                light_is_on,
-                light_intensity,
-                curtain_position
-            );
+            // console.log(
+            //     ac_is_on,
+            //     ac_temperature,
+            //     ac_wind,
+            //     ac_mode,
+            //     light_is_on,
+            //     light_intensity,
+            //     curtain_position
+            // );
         },
         error: function (err) {
             console.log("Device Request failed", err);

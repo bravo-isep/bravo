@@ -20,6 +20,8 @@ if ($_SESSION["isLogin"] != true) {
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <script src="./js/jquery.cookie.js"></script>
     <script src="./js/getValue.js"></script>
+    <script src="./js/ac_control.js"></script>
+    <script src="./js/light_control.js"></script>
     <script src="./js/manage.js"></script>
     <script src="./js/index.js"></script>
 

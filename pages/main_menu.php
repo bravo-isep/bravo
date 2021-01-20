@@ -66,19 +66,19 @@
 			<li>[09/09/2020]The office has been disinfected today.</li>
 		</ul>
 	</div>
-	<div class="button" id="menu_light" style="float:left" onclick="setPage('./pages/light_control.php','Light','0')">
-		<img src="./image/light.png" />
+	<div class="button" id="menu_light" style="float:left" onclick="setPage('./pages/light_control.php','Light',$.cookie('idRoom'))">
+		<img src="./image/light.png" id="lightPicture" />
 		<div class="buttonText1">Light</div>
 		<img src="./image/onoff.png" id="picturebutton" onclick="light_switch();clickBtn(event)">
 		<input id="intensity" type="range" value="50" onchange="change_intensity()" onclick="clickBtn(event)"></input><br>
 		<input id="curtain" type="range" value="50" onchange="control_curtain()" onclick="clickBtn(event)"></input>
 	</div>
-	<button class="button" id="menu_security" onclick="setPage('./pages/room_select.php','Security','0')">
+	<button class="button" id="menu_security" onclick="setPage('./pages/room_select.php','Security',$.cookie('idRoom'))">
 		<img src="./image/security.png" />
 		<div class="buttonText1">Security</div>
 		<div class="buttonText2">NORMAL</div>
 	</button>
-	<button class="button" id="menu_health" onclick="setPage('./pages/health.php','Health','0')">
+	<button class="button" id="menu_health" onclick="setPage('./pages/health.php','Health',$.cookie('idRoom'))">
 		<img src="./image/health.png" />
 		<div class="buttonText1">Health</div>
 		<div class="buttonText2">NORMAL</div>
