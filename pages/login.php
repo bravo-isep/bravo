@@ -15,6 +15,7 @@ if (isset($_SESSION["isLogin"]) && $_SESSION["isLogin"] === true) {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="login.css" />
 
+    <script src="../js/login.js"></script>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/jquery.cookie.js"></script>
     <script src="../js/crypto.aes.js"></script>

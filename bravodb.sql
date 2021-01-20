@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `bravo` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE  IF NOT EXISTS `bravo` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `bravo`;
 -- MySQL dump 10.13  Distrib 8.0.22, for Win64 (x86_64)
 --
@@ -28,7 +28,7 @@ CREATE TABLE `ac_sys` (
   `idac_sys` int NOT NULL,
   `tempereture` int NOT NULL DEFAULT '26',
   `fanspeed` int NOT NULL DEFAULT '-1',
-  `mode` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'cold',
+  `mode` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'cold',
   `idroom` int NOT NULL,
   PRIMARY KEY (`idac_sys`),
   KEY `ac_sys_idroom_idx` (`idroom`),
@@ -55,7 +55,7 @@ DROP TABLE IF EXISTS `alarm`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `alarm` (
   `idalarm` int NOT NULL,
-  `type` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `type` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `idsensor` int NOT NULL,
   `time` datetime NOT NULL,
   PRIMARY KEY (`idalarm`),
@@ -195,8 +195,8 @@ DROP TABLE IF EXISTS `room`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `room` (
   `idroom` int NOT NULL,
-  `type` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `room_name` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `type` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `room_name` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`idroom`),
   UNIQUE KEY `room_name_UNIQUE` (`room_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -221,7 +221,7 @@ DROP TABLE IF EXISTS `sensor`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `sensor` (
   `idsensor` int NOT NULL,
-  `type` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `type` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `value` float DEFAULT NULL,
   `idroom` int NOT NULL,
   `time` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -250,8 +250,8 @@ DROP TABLE IF EXISTS `user`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user` (
   `iduser` int NOT NULL,
-  `username` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `password` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `username` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `userlevel` tinyint unsigned NOT NULL DEFAULT '0',
   `idroom` int NOT NULL,
   PRIMARY KEY (`iduser`),
