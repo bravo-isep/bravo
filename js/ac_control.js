@@ -9,6 +9,9 @@ function ac_showTemperature() {
 function ac_switch() {
     ac_is_on = 1 - ac_is_on;
 }
+
+
+
 function ac_temperatureUp() {
     if (ac_is_on == 1) {
         ac_temperature += 1;

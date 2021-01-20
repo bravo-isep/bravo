@@ -14,7 +14,8 @@ window.onload = function () {
                 employeeRoom = resp.userIdRoom; //1:Employee 2:Manager 3:Administrator
                 console.log(employeeName, employeeNumber, authorityLevel, employeeRoom);
                 getSensor(employeeRoom);
-                setPage("./pages/main_menu.php", "Menu", "0", employeeName);
+                getDevice(employeeRoom);
+                setPage("./pages/main_menu.php", "Menu", $.cookie("idRoom"), employeeName);
             } else {
                 console.log("getUser failed");
             }
@@ -38,10 +39,44 @@ function getSensor(idRoom) {
             temperature = resp.temperature;
             humidity = resp.humidity;
             brightness = resp.brightness;
-            console.log(temperature, humidity, brightness);
+            // console.log(temperature, humidity, brightness);
         },
         error: function (err) {
             console.log("Sensor Request failed", err);
+        },
+    });
+}
+
+function getDevice(idRoom) {
+    $.ajax({
+        type: "POST",
+        url: "./controller/getDevice.php",
+        data: {
+            key: "123",
+            idRoom: idRoom,
+        },
+        dataType: "json",
+        success: function (resp) {
+            ac_is_on = resp.AC_OnOff;
+            ac_temperature = resp.AC_temp;
+            ac_wind = resp.AC_fan;
+            ac_mode = resp.AC_mode;
+            light_is_on = resp.Light_OnOff;
+            light_intensity = resp.Light_bri;
+            curtain_position = resp.Curtain_position;
+
+            console.log(
+                ac_is_on,
+                ac_temperature,
+                ac_wind,
+                ac_mode,
+                light_is_on,
+                light_intensity,
+                curtain_position
+            );
+        },
+        error: function (err) {
+            console.log("Device Request failed", err);
         },
     });
 }

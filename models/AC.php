@@ -17,7 +17,7 @@ function getACStatus($roomId)
         $onOff = 1;
         $fanSpeed = $ACStatus[0]['fanspeed'];
     }
-    $AC = [$ACStatus[0]['tempereture'], $fanSpeed, $ACStatus[0]['mode'], $onOff];
+    $AC = [$onOff, $ACStatus[0]['tempereture'], $fanSpeed, $ACStatus[0]['mode']];
     return $AC;
 }
 

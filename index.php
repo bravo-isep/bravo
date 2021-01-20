@@ -21,62 +21,8 @@ if ($_SESSION["isLogin"] != true) {
     <script src="./js/jquery.cookie.js"></script>
     <script src="./js/getValue.js"></script>
     <script src="./js/manage.js"></script>
-    <script>
+    <script src="./js/index.js"></script>
 
-        //variables for index
-
-        //variables for ac_control.php
-        var ac_is_on = 0;
-        var ac_temperature = 27;
-        var ac_mode = 3;
-        var ac_wind = 3;
-        //variables for light_control.php
-        var light_is_on = 0;
-        var light_intensity = 50; //0~100 or same as database
-        var curtain_position = 50; //too
-
-        function sendAlarm() {
-            alert("Alarm"); //change this into sending an alarm to server 
-        }
-
-        function reportIllness() {
-            alert("report illness"); //same as above
-        }
-
-        function findDevice() {
-            alert(
-                "New device found"
-            ); //maybe automatically fill the device table's last<tr> with the information of the new device...whatever
-        }
-
-        function clickBtn(
-            event
-        ) //When a small button on a big button, I click the small one but the "onclick" of the big one will also react, this function is to stop it.
-        {
-            event = event ? event : window.event;
-            event.stopPropagation();
-        }
-
-        function logout() {
-            var cookies = $.cookie();
-            for (var cookie in cookies) {
-                $.removeCookie(cookie, {
-                    path: "/"
-                });
-            }
-            $.ajax({
-                type: "POST",
-                url: "./controller/logout.php",
-                success: function(resp) {
-                    window.location.href = './pages/login.php'
-                },
-                error: function(err) {
-                    console.log("err：", err);
-                    alert(err);
-                }
-            });
-        }
-    </script>
     <script type="text/javascript" src="./js/page.js"></script>
 </head>
 
