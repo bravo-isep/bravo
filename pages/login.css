@@ -10,6 +10,32 @@ body{
 	height:50%;
 	font-size: 0.8vw;
 	border-radius: 20px;
+<<<<<<< Updated upstream
+=======
+	box-shadow: 3px 3px 10px 0 rgba(0,0,0,0.4);
+	background-color: #FFFFFF;
+}
+#change_password{
+	position:absolute;
+	margin-top: 20%;
+	margin-left: 38%;
+	width:20%;
+	height:50%;
+	font-size: 0.8vw;
+	border-radius: 20px;
+	box-shadow: 3px 3px 10px 0 rgba(0,0,0,0.4);
+	background-color: #FFFFFF;
+}
+#reset_password{
+	position:absolute;
+	margin-top: 20%;
+	margin-left: 38%;
+	width:20%;
+	height:50%;
+	font-size: 0.8vw;
+	border-radius: 20px;
+	box-shadow: 3px 3px 10px 0 rgba(0,0,0,0.4);
+>>>>>>> Stashed changes
 	background-color: #FFFFFF;
 }
 #name{
@@ -32,6 +58,7 @@ body{
 	font-size: 1.5vw;
 	border: 2px solid;
 	border-color: #909090;
+<<<<<<< Updated upstream
 }
 #remember_me{
     cursor: pointer;
@@ -54,8 +81,79 @@ body{
 	margin-right: 8%;
 	float: right;
     cursor: pointer;
+=======
+}
+[name="op"]{
+	margin-top: 5%;
+	margin-left: 8%;
+	width:80%;
+	font-size: 1.5vw;
+	border: 2px solid;
+	border-color: #909090;
+}
+[name="np"]{
+	margin-top: 5%;
+	margin-left: 8%;
+	width:80%;
+	font-size: 1.5vw;
+	border: 2px solid;
+	border-color: #909090;
+}
+[name="cnp"]{
+	margin-top: 5%;
+	margin-left: 8%;
+	width:80%;
+	font-size: 1.5vw;
+	border: 2px solid;
+	border-color: #909090;
+}
+[name="e"]{
+	margin-top: 5%;
+	margin-left: 8%;
+	width:80%;
+	font-size: 1.5vw;
+	border: 2px solid;
+	border-color: #909090;
+}
+#remember_me{
+    cursor: pointer;
+	margin-top: 5%;
+	margin-left: 8%;
+	font-size: 0.8vw;
+}
+button{
+    cursor: pointer;
+	margin-top: 5%;
+	margin-left: 8%;
+	width:83%;
+	height:3vw;
+	font-size: 1.5vw;
+	color: #FFFFFF;
+	background-color: #353535;
+	border: none;
+}
+#forgot_password{
+	margin-top: 2%;
+	margin-right: 8%;
+	float: right;
+    cursor: pointer;
+>>>>>>> Stashed changes
 	color: #808080;
 	font-size: 0.8vw;
 	background-color: #FFFFFF;
 	border: none;
+<<<<<<< Updated upstream
 }
+=======
+}
+form div{	
+	margin-top: 5%;
+	margin-left: 8%;
+	font-size: 1vw;
+}
+
+
+
+
+
+>>>>>>> Stashed changes
