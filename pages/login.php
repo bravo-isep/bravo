@@ -8,7 +8,7 @@ if (isset($_SESSION["isLogin"]) && $_SESSION["isLogin"] === true) {
     exit();
 }
 ?>
-
+<!-- To login, Employee number is "0"employee or "1"manager or "2"admin, and password is "passwd" -->
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
