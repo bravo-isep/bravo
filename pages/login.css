@@ -113,7 +113,8 @@ body {
 }
 
 #loginButton,
-#resetPassword {
+#resetPassword,
+#changePassword {
     position: absolute;
     width: 90%;
     height: 10%;
@@ -129,7 +130,7 @@ body {
     box-shadow: 2px 2px 5px #19614f;
 }
 
-#resetPassword{
+#resetPassword {
     left: 0%;
 }
 
@@ -182,7 +183,6 @@ span {
 .span_green {
     color: green;
 }
-
 
 form div {
     margin-top: 5%;
