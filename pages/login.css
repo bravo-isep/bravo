@@ -89,37 +89,20 @@ body {
     box-shadow: 2px 2px 5px #19614f;
 }
 
-#resetPassword {
-    left: 0%;
-}
 
 #loginButton:hover,
-#resetPassword:hover {
+#resetPassword:hover,
+#changePassword:hover {
     background: linear-gradient(to bottom right, #17c2b9, #2bce9a);
 }
 
 #loginButton:active,
-#resetPassword:active {
+#resetPassword:active,
+#changePassword:active {
     background: linear-gradient(to bottom right, #0f8f88, #18946d);
     box-shadow: -2px -2px 2px #19614f;
 }
 
-#resetPassword {
-    cursor: pointer;
-    margin-top: 5%;
-    margin-left: 8%;
-    width: 83%;
-    height: 3vw;
-    font-size: 1.5vw;
-    color: #ffffff;
-    background-color: #353535;
-    transition-duration: 0.1s;
-    border: none;
-}
-
-#resetPassword:hover {
-    background-color: #424242;
-}
 
 span {
     display: block;
