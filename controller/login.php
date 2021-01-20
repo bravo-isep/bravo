@@ -1,5 +1,6 @@
 <?php
 include_once "../models/user.php";
+include_once "../models/room.php";
 $users = getUser();
 $allIdUser = array_column($users, 'iduser');
 
@@ -10,7 +11,8 @@ if (isset($_POST['user']) && isset($_POST['passwd'])) {
     // Save all user Data
     if (in_array($user, $allIdUser)) {
         if (getUserPassword($user) === $passwd) {
-            echo json_encode(array('success' => 1));
+            $idRoom = getUserRoom($user);
+            echo json_encode(array('success' => 1,'idRoom' =>$idRoom));
             session_start();
             $_SESSION['isLogin'] = true;
             $_SESSION["idUser"] = $user;

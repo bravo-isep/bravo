@@ -18,6 +18,7 @@
     */
 
 	include_once("../models/room.php");
+	$idUser = $_COOKIE['idUser'];
 	$roomDevice = 0;
 	$roomDevice = $_GET['roomdevice'];
 
@@ -25,7 +26,7 @@
 	$idRoom = array_column($rooms, 'idroom');
 	$roomName = array_column($rooms, 'room_name');
 
-	$userRoom = getUserRoom();
+	$userRoom = getUserRoomAll();
 	$userIdRoom = array_column($userRoom, 'idroom');
 	$userRoomName = array_column($userRoom, 'room_name');
 
@@ -54,40 +55,43 @@
 				");
 	}
 
-	for ($i = 0; $i < count($rooms); $i++) { //Change the loop condition into traversing the database of the device
-		if ($roomDevice == "1") {
-			echo ("
-						<button class=\"button\" onclick=\"setPage('./pages/ac_control.php','Air Conditioner',$idRoom[$i])\">
-							<img src=\"./image/ac.png\" />
-							<div class=\"buttonText1\"> $roomName[$i] </div>
-							<div class=\"buttonText2\">AC#$idRoom[$i]</div>
-						</button>
-					");
-		} elseif ($roomDevice == "2") {
-			echo ("
-						<button class=\"button\" onclick=\"setPage('./pages/light_control.php','Light',$idRoom[$i])\">
-							<img src=\"./image/light.png\" />
-							<div class=\"buttonText1\"> $roomName[$i] </div>
-							<div class=\"buttonText2\">L#$idRoom[$i]</div>
-						</button>
-					");
-		} elseif ($roomDevice == "3") {
-			echo ("
-						<button class=\"button\" onclick=\"setPage('./pages/alarm.php','Security', $idRoom[$i])\">
-							<img src=\"./image/detector.png\" />
-							<div class=\"buttonText1\"> $roomName[$i] </div>
-							<div class=\"buttonText2\">A#$idRoom[$i]</div>
-						</button>
-					");
+	if (getUserLevel($idUser) != 1) {
+		for ($i = 0; $i < count($rooms); $i++) { //Change the loop condition into traversing the database of the device
+			if ($roomDevice == "1") {
+				echo ("
+							<button class=\"button\" onclick=\"setPage('./pages/ac_control.php','Air Conditioner',$idRoom[$i])\">
+								<img src=\"./image/ac.png\" />
+								<div class=\"buttonText1\"> $roomName[$i] </div>
+								<div class=\"buttonText2\">AC#$idRoom[$i]</div>
+							</button>
+						");
+			} elseif ($roomDevice == "2") {
+				echo ("
+							<button class=\"button\" onclick=\"setPage('./pages/light_control.php','Light',$idRoom[$i])\">
+								<img src=\"./image/light.png\" />
+								<div class=\"buttonText1\"> $roomName[$i] </div>
+								<div class=\"buttonText2\">L#$idRoom[$i]</div>
+							</button>
+						");
+			} elseif ($roomDevice == "3") {
+				echo ("
+							<button class=\"button\" onclick=\"setPage('./pages/alarm.php','Security', $idRoom[$i])\">
+								<img src=\"./image/detector.png\" />
+								<div class=\"buttonText1\"> $roomName[$i] </div>
+								<div class=\"buttonText2\">A#$idRoom[$i]</div>
+							</button>
+						");
+			}
 		}
+		//this button is for adding new devices, has nothing to do with the database.
+		echo ("
+					<br>
+					<button class=\"button\" id=\"add_device\" onclick=\"setPage('./pages/device_management.php','Manage')\">
+					<img src=\"./image/adddevice.png\" />
+					</button>
+				");
 	}
-	//this button is for adding new devices, has nothing to do with the database.
-	echo ("
-				<br>
-				<button class=\"button\" id=\"add_device\" onclick=\"setPage('./pages/device_management.php','Manage')\">
-				<img src=\"./image/adddevice.png\" />
-				</button>
-			");
+
 	?>
 </body>
 

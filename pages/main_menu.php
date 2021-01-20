@@ -8,9 +8,6 @@
 </head>
 
 <body>
-	<script>
-		setInterval(console.log("1"), 1000);
-	</script>
 	<?php
 	include_once("../models/user.php");
 	include_once("../models/sensor.php");
@@ -20,6 +17,7 @@
 	$humidity = getSensor($idRoom, 'humidity');
 	$brightness = getSensor($idRoom, 'brightness');
 	?>
+
 	<button class="button">
 		<img src="./image/temperature.png" />
 		<div class="buttonText1">Outside Temp</div>
@@ -40,7 +38,7 @@
 		<div class="buttonText1">Energy</div>
 		<div class="buttonText2">55kWh</div>
 	</button>
-	<div class="button" id="menu_ac" style="float:left" onclick="setPage('./pages/ac_control.php','Air Conditioner','0')">
+	<div class="button" id="menu_ac" style="float:left" onclick="setPage('./pages/ac_control.php','Air Conditioner',$.cookie('idRoom'))">
 		<div id="ac_text1">Air Conditioner</div>
 		<div id="ac_text2">Temperature</div>
 		<div id="temperature"></div>

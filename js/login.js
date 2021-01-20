@@ -21,13 +21,14 @@ function check(user, passwd) {
         success: function (resp) {
             console.log("success：", resp);
             if (resp.success == "1") {
+                var room = resp.idRoom;
                 $("#output").text("success").prop("class", "span_green");
                 if ($("#remember_me").prop("checked")) {
                     clearCookie();
-                    saveCookie(user, passwd, 1);
+                    saveCookie(user, room, passwd, 1);
                 } else {
                     clearCookie();
-                    saveCookie(user, passwd, 0);
+                    saveCookie(user, room, passwd, 0);
                 }
                 window.location.href = "../index.php";
                 exit;
@@ -42,8 +43,12 @@ function check(user, passwd) {
     });
 }
 
-function saveCookie(user, passwd, save) {
+function saveCookie(user, room, passwd, save) {
     $.cookie("idUser", user, {
+        expires: 7,
+        path: "/",
+    });
+    $.cookie("idRoom", room, {
         expires: 7,
         path: "/",
     });
@@ -67,6 +72,10 @@ function saveCookie(user, passwd, save) {
 
 function clearCookie() {
     $.cookie("idUser", "", {
+        expires: -1,
+        path: "/",
+    });
+    $.cookie("idRoom", "", {
         expires: -1,
         path: "/",
     });

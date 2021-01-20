@@ -14,13 +14,24 @@ function getUserTemperature($userId)
     return $userTemperature[0]['temperature'];
 }
 
-function getUserAllTemperature($userId)
+function getAllUserTemperature()
+{
+
+    global $db;
+    $sth = $db->prepare('SELECT * FROM body_temperature_detection ORDER BY time DESC ');
+    $sth->execute();
+    $userAllTemperature = $sth->fetchAll(PDO::FETCH_ASSOC);
+    $sth = null;
+    return $userAllTemperature;
+}
+
+function getMyUserTemperature($idUser)
 {
 
     global $db;
     $sth = $db->prepare('SELECT * FROM body_temperature_detection WHERE iduser = ? ORDER BY time DESC ');
-    $sth->execute(array($userId));
-    $userAllTemperature = $sth->fetchAll(PDO::FETCH_ASSOC);
+    $sth->execute(array($idUser));
+    $myTemperature = $sth->fetchAll(PDO::FETCH_ASSOC);
     $sth = null;
-    return $userAllTemperature;
+    return $myTemperature;
 }
