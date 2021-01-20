@@ -1,6 +1,6 @@
 <?php
 
-include("user.php");
+include_once("user.php");
 $db = connect();
 
 

@@ -1,13 +1,23 @@
 ﻿<!DOCTYPE html>
 <html>
+<?php
+$isLogin = false;
+session_start();
+if ($_SESSION["isLogin"] != true) {
+    header('Location: ./pages/login.php');
+    exit();
+}
+?>
 
 <head>
     <!--test by zhongjiquan-->
     <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bravo Smart Office</title>
-	<link rel="stylesheet" type="text/css" href="./pages/default.css" />
+    <link rel="stylesheet" type="text/css" href="./pages/default.css" />
     <link rel="stylesheet" type="text/css" href="./pages/unique.css" />
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script src="./js/jquery.cookie.js"></script>
     <script>
         // maybe I should put these codes into a js file?
 
@@ -48,6 +58,26 @@
             event = event ? event : window.event;
             event.stopPropagation();
         }
+
+        function logout() {
+            var cookies = $.cookie();
+            for (var cookie in cookies) {
+                $.removeCookie(cookie, {
+                    path: "/"
+                });
+            }
+            $.ajax({
+                type: "POST",
+                url: "./controller/logout.php",
+                success: function(resp) {
+                    window.location.href = './pages/login.php'
+                },
+                error: function(err) {
+                    console.log("err：", err);
+                    alert(err);
+                }
+            });
+        }
     </script>
     <script type="text/javascript" src="./js/page.js"></script>
 </head>
@@ -55,21 +85,22 @@
 <body bgcolor="#2B3331">
 
     <!--logo-->
-    <img id="logo" style="float:left;" src="./image/logo.png"/>
+    <img id="logo" style="float:left;" src="./image/logo.png" />
 
     <!--header-->
     <div id="header">
-		<img id="header_icon"  src="./image/header.png" />
+        <img id="header_icon" src="./image/header.png" />
         <div id="name"></div>
-		
-		<span id="button-list-group">
-			<div id="user"></div>
-			<img id="user_icon" src="./image/head.png" />
-			<span id="button-list-area"><!--This two will show after you put your mouse on the user-->
-				<button id="signout" class="side_menu_button" onclick="window.location.href='./pages/login.php'">Sign out</button>
-				<button id="change_password_button" class="side_menu_button" onclick="window.location.href='./pages/change_password.php'">Change password</button>
-			</span>
-		</span>
+
+        <span id="button-list-group">
+            <div id="user"></div>
+            <img id="user_icon" src="./image/head.png" />
+            <span id="button-list-area">
+                <!--This two will show after you put your mouse on the user-->
+                <button id="signout" class="side_menu_button" onclick="logout();">Sign out</button>
+                <button id="change_password_button" class="side_menu_button" onclick="window.location.href='./pages/change_password.php'">Change password</button>
+            </span>
+        </span>
     </div>
 
     <!--side menu-->
@@ -88,7 +119,7 @@
 
     <!--set default page-->
     <script>
-        setPage('./pages/main_menu.php', 'Menu','0', employeeName);
+        setPage('./pages/main_menu.php', 'Menu', '0', employeeName);
     </script>
     <script type="text/javascript" src="./js/ac_control.js"></script>
     <script type="text/javascript" src="./js/light_control.js"></script>

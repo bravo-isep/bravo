@@ -1,10 +1,22 @@
 ﻿<!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <title>Bravo Smart Office</title>
+	<meta charset="UTF-8">
+	<title>Bravo Smart Office</title>
+	<script type="text/javascript">
+	
+	</script>
 </head>
+
 <body>
+	<?php
+	include_once("../models/user.php");
+    $allUsers = getUser();
+	$allUserId = array_column($allUsers,"iduser");
+    // print_r($allUserId);
+	?>
+
 	<div class="page_title">
 		<img src="./image/authority.png" />
 		<div class="buttonText2">Authority</div>
@@ -18,26 +30,41 @@
 			<td>MANAGEMENT</td>
 		</tr>
 		<?php
-            for ($i=0; $i<=3; $i++) {
-                echo('
+		foreach($allUserId as $id) {
+			$room = getUserIdRoom($id);
+			switch(getUserLevel($id)){
+				case '1':
+                    $level = 1;
+					break;
+				case '2':
+					$level = 2;
+					break;
+				case '3':
+					$level = 3;
+					break;
+				default :
+                    $level = 'unknown';
+			}
+			echo ("
 					<tr>
-						<td>AC#1001</td>
-						<td>331234</td>
-						<td>Total control</td>
-						<td><button class="delete">Delete</button></td>
+						<td>$room</td>
+						<td>$id</td>
+						<td>$level</td>
+						<td><button class=\"delete\">Delete</button></td>
 					</tr>
-				');
-            }
-        ?>
+				");
+		}
+		?>
 		<tr>
 			<td><input></input></td>
 			<td><input></input></td>
 			<td><select>
-				<option value ="none">None</option>
-				<option value ="total control">Total control</option>
-			</select></td>
+					<option value="none">None</option>
+					<option value="total control">Total control</option>
+				</select></td>
 			<td><button class="add">Add</button></td>
 		</tr>
 	</table>
 </body>
-</html> 
+
+</html>

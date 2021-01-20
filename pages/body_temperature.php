@@ -8,7 +8,7 @@
 
 <body>
 	<?php
-	include("../models/health.php");
+	include_once("../models/health.php");
 	$tem = getUserTemperature(getUserId());
     $All = getUserAllTemperature(getUserId());
 	?>

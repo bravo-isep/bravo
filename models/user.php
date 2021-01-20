@@ -1,11 +1,21 @@
 <?php
 
-include("connect.php");
+include_once("connect.php");
 $db = connect();
 
 function getUserId()
 {
     return 0;
+}
+
+function getUser()
+{
+    global $db;
+    $sth = $db->prepare('SELECT * FROM user');
+    $sth->execute();
+    $userName = $sth->fetchAll(PDO::FETCH_ASSOC);
+    $sth = null;
+    return $userName;
 }
 
 function getUserName($userId)
@@ -39,3 +49,14 @@ function getUserIdRoom($userId)
     $sth = null;
     return $userIdRoom[0]['idroom'];
 }
+
+function getUserPassword($userId)
+{
+    global $db;
+    $sth = $db->prepare('SELECT password FROM user WHERE iduser = ?');
+    $sth->execute(array($userId));
+    $userIdRoom = $sth->fetchAll(PDO::FETCH_ASSOC);
+    $sth = null;
+    return $userIdRoom[0]['password'];
+}
+

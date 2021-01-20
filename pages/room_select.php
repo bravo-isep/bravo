@@ -17,7 +17,7 @@
         the way to send "authorityLevel" is just like how I sent the "roomDevice", maybe, I guess...
     */
 
-	include("../models/room.php");
+	include_once("../models/room.php");
 	$roomDevice = 0;
 	$roomDevice = $_GET['roomdevice'];
 
