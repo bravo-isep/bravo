@@ -1,118 +1,126 @@
-* {
-    outline: none;
+body{
+	background: url(../image/login.png);
+	background-size: cover;
 }
-body {
-    background: url(../image/login.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #048665;
+#login{
+	position:absolute;
+	margin-top: 20%;
+	margin-left: 38%;
+	width:20%;
+	height:50%;
+	font-size: 0.8vw;
+	border-radius: 20px;
+	box-shadow: 3px 3px 10px 0 rgba(0,0,0,0.4);
+	background-color: #FFFFFF;
 }
-#login {
-    position: absolute;
-    margin-top: 15%;
-    left: 50%;
-    margin-left: -10%;
-    width: 20%;
-    height: 50%;
-    font-size: 1vw;
-    border: 0px;
-    border-radius: 20px;
-    background-color: #ffffff;
-    box-shadow: 10px 10px 20px #19614f;
+#change_password{
+	position:absolute;
+	margin-top: 20%;
+	margin-left: 38%;
+	width:20%;
+	height:50%;
+	font-size: 0.8vw;
+	border-radius: 20px;
+	box-shadow: 3px 3px 10px 0 rgba(0,0,0,0.4);
+	background-color: #FFFFFF;
 }
-#name {
-    margin-top: 5%;
-    margin-left: 8%;
-    font-size: 2vw;
+#reset_password{
+	position:absolute;
+	margin-top: 20%;
+	margin-left: 38%;
+	width:20%;
+	height:50%;
+	font-size: 0.8vw;
+	border-radius: 20px;
+	box-shadow: 3px 3px 10px 0 rgba(0,0,0,0.4);
+	background-color: #FFFFFF;
 }
-[name="u"] {
-    margin-top: 8%;
-    margin-left: 8%;
-    width: 80%;
-    height: 1.8vw;
-    font-size: 1.2vw;
-    border: 2px solid;
-    border-color: #909090;
-    border-radius: 10px;
+#name{
+	margin-top: 5%;
+	margin-left: 8%;
+	font-size: 2vw;
 }
-[name="p"] {
-    margin-top: 8%;
-    margin-left: 8%;
-    width: 80%;
-    height: 1.8vw;
-    font-size: 1.2vw;
-    border: 2px solid;
-    border-color: #909090;
-    border-radius: 10px;
+[name="u"]{
+	margin-top: 5%;
+	margin-left: 8%;
+	width:80%;
+	font-size: 1.5vw;
+	border: 2px solid;
+	border-color: #909090;
 }
-
-.checkbox {
-    width: 1vw;
-    height: 1vw;
+[name="p"]{
+	margin-top: 5%;
+	margin-left: 8%;
+	width:80%;
+	font-size: 1.5vw;
+	border: 2px solid;
+	border-color: #909090;
+}
+[name="op"]{
+	margin-top: 5%;
+	margin-left: 8%;
+	width:80%;
+	font-size: 1.5vw;
+	border: 2px solid;
+	border-color: #909090;
+}
+[name="np"]{
+	margin-top: 5%;
+	margin-left: 8%;
+	width:80%;
+	font-size: 1.5vw;
+	border: 2px solid;
+	border-color: #909090;
+}
+[name="cnp"]{
+	margin-top: 5%;
+	margin-left: 8%;
+	width:80%;
+	font-size: 1.5vw;
+	border: 2px solid;
+	border-color: #909090;
+}
+[name="e"]{
+	margin-top: 5%;
+	margin-left: 8%;
+	width:80%;
+	font-size: 1.5vw;
+	border: 2px solid;
+	border-color: #909090;
+}
+#remember_me{
     cursor: pointer;
+	margin-top: 5%;
+	margin-left: 8%;
+	font-size: 0.8vw;
 }
-
-#remember_me {
+[type="submit"],[type="button"]{
     cursor: pointer;
-    margin-top: 8%;
-    margin-left: 8%;
-    z-index: 999;
+	margin-top: 5%;
+	margin-left: 8%;
+	width:83%;
+	height:3vw;
+	font-size: 1.5vw;
+	color: #FFFFFF;
+	background-color: #353535;
+	transition-duration: 0.1s;
+	border: none;
 }
-
-#forgot_password {
-    position: absolute;
-    width: 90%;
-    left: 50%;
-    margin-left: -45%;
-    top: 93%;
+[type="submit"]:hover,[type="button"]:hover{
+	background-color: #424242;
+}
+#forgot_password{
+	margin-top: 2%;
+	margin-right: 8%;
+	float: right;
     cursor: pointer;
-    color: #808080;
-    font-size: 0.8vw;
-    background-color: #ffffff;
-    border: none;
+	color: #808080;
+	font-size: 0.8vw;
+	background-color: #FFFFFF;
+	border: none;
 }
-
-#loginButton {
-    position: absolute;
-    width: 90%;
-    height: 10%;
-    left: 50%;
-    margin-left: -45%;
-    top: 70%;
-    border-radius: 20px;
-
-    background: linear-gradient(to bottom right, #2bce9a, #17c2b9);
-    cursor: pointer;
-    color: #ffffff;
-    font-size: 1.2vw;
-}
-
-#loginButton:hover {
-    background: linear-gradient(to bottom right, #17c2b9, #2bce9a);
-}
-
-#loginButton:active {
-    background: linear-gradient(to bottom right, #0f8f88, #18946d);
-}
-
-span {
-    display: block;
-    margin-bottom: 12px;
-    height: 1.2vw;
-    font-size: 1vw;
-    margin-left: 8%;
-    position: absolute;
-    width: 90%;
-    left: 50%;
-    margin-left: -45%;
-    top: 55%;
-    text-align: center;
-}
-
-.span_red {
-    color: red;
-}
-
-.span_green {
-    color: green;
+form div{	
+	margin-top: 5%;
+	margin-left: 8%;
+	font-size: 1vw;
 }
