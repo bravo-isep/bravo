@@ -16,7 +16,7 @@ window.onload = function () {
                 getSensor(employeeRoom);
                 getDevice(employeeRoom);
                 setPage("./pages/main_menu.php", "Menu", $.cookie("idRoom"), employeeName);
-                if (authorityLevel == 1) {
+                if (authorityLevel != 3) {
                     $('#side_menu_button').hide();
                 }
             } else {
