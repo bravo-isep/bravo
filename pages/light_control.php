@@ -4,6 +4,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Bravo Smart Office</title>
+	<script>
+		window.location.href="../index.php"
+	</script>
 </head>
 
 <body>

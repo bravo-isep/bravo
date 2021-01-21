@@ -32,6 +32,7 @@ CREATE TABLE `ac_sys` (
   `mode` int NOT NULL DEFAULT '1',
   `idroom` int NOT NULL,
   PRIMARY KEY (`idac_sys`),
+  UNIQUE KEY `idac_sys_UNIQUE` (`idac_sys`),
   KEY `ac_sys_idroom_idx` (`idroom`),
   CONSTRAINT `ac_sys_idroom` FOREIGN KEY (`idroom`) REFERENCES `room` (`idroom`) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -88,6 +89,7 @@ CREATE TABLE `body_temperature_detection` (
   `temperature` float NOT NULL,
   `time` datetime NOT NULL,
   PRIMARY KEY (`idbtd`),
+  UNIQUE KEY `idbtd_UNIQUE` (`idbtd`),
   KEY `btd_idsensor_idx` (`idsensor`),
   KEY `btd_iduser_idx` (`iduser`),
   CONSTRAINT `btd_idsensor` FOREIGN KEY (`idsensor`) REFERENCES `sensor` (`idsensor`) ON UPDATE CASCADE,
@@ -119,6 +121,7 @@ CREATE TABLE `lighting_sys` (
   `curtain_position` int NOT NULL DEFAULT '50',
   `idroom` int NOT NULL,
   PRIMARY KEY (`idlighting_sys`),
+  UNIQUE KEY `idlighting_sys_UNIQUE` (`idlighting_sys`),
   KEY `lighting_sys_idroom_idx` (`idroom`),
   CONSTRAINT `lighting_sys_idroom` FOREIGN KEY (`idroom`) REFERENCES `room` (`idroom`) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -174,6 +177,7 @@ CREATE TABLE `sensor` (
   `idroom` int NOT NULL,
   `time` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`idsensor`),
+  UNIQUE KEY `idsensor_UNIQUE` (`idsensor`),
   KEY `idroom_idx` (`idroom`),
   CONSTRAINT `sensor_idroom` FOREIGN KEY (`idroom`) REFERENCES `room` (`idroom`) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -185,7 +189,7 @@ CREATE TABLE `sensor` (
 
 LOCK TABLES `sensor` WRITE;
 /*!40000 ALTER TABLE `sensor` DISABLE KEYS */;
-INSERT INTO `sensor` VALUES (0,'temperature',34.6,301,'2021-01-21 03:02:51'),(1,'temperature',25.5,302,'2021-01-21 03:02:51'),(2,'temperature',26.3,601,'2021-01-21 03:02:51'),(3,'temperature',31.2,602,'2021-01-21 03:02:51'),(4,'temperature',36.7,603,'2021-01-21 03:02:51'),(5,'humidity',53.8,301,'2021-01-21 03:02:51'),(6,'humidity',66.2,302,'2021-01-21 03:02:51'),(7,'humidity',51.7,601,'2021-01-21 03:02:51'),(8,'humidity',59.1,602,'2021-01-21 03:02:51'),(9,'humidity',43,603,'2021-01-21 03:02:51'),(10,'brightness',96.8,301,'2021-01-21 03:02:51'),(11,'brightness',71.4,302,'2021-01-21 03:02:51'),(12,'brightness',92.7,601,'2021-01-21 03:02:51'),(13,'brightness',3.9,602,'2021-01-21 03:02:51'),(14,'brightness',35,603,'2021-01-21 03:02:51'),(15,'smoke',0,301,'2020-12-03 05:11:46'),(16,'smoke',0,302,'2020-12-03 05:11:46'),(17,'smoke',0,601,'2020-12-03 05:11:46'),(18,'smoke',0,602,'2020-12-03 05:11:47'),(19,'smoke',0,603,'2020-12-03 05:11:47'),(20,'Intrusion ',0,301,'2020-12-03 05:11:48'),(21,'Intrusion ',0,302,'2020-12-03 05:11:48'),(22,'Intrusion ',0,601,'2020-12-03 05:11:49'),(23,'Intrusion ',0,602,'2020-12-03 05:11:49'),(24,'Intrusion ',0,603,'2020-12-03 05:11:50'),(25,'body temperature',38,101,'2021-01-21 03:02:51');
+INSERT INTO `sensor` VALUES (0,'temperature',34.2,301,'2021-01-21 05:30:52'),(1,'temperature',33.6,302,'2021-01-21 05:30:52'),(2,'temperature',18.1,601,'2021-01-21 05:30:52'),(3,'temperature',25.9,602,'2021-01-21 05:30:52'),(4,'temperature',16.1,603,'2021-01-21 05:30:52'),(5,'humidity',29.5,301,'2021-01-21 05:30:52'),(6,'humidity',78.6,302,'2021-01-21 05:30:52'),(7,'humidity',46.2,601,'2021-01-21 05:30:52'),(8,'humidity',23.9,602,'2021-01-21 05:30:52'),(9,'humidity',44.1,603,'2021-01-21 05:30:52'),(10,'brightness',41.8,301,'2021-01-21 05:30:52'),(11,'brightness',44.9,302,'2021-01-21 05:30:52'),(12,'brightness',33.9,601,'2021-01-21 05:30:52'),(13,'brightness',58.7,602,'2021-01-21 05:30:52'),(14,'brightness',11.4,603,'2021-01-21 05:30:52'),(15,'smoke',0,301,'2020-12-03 05:11:46'),(16,'smoke',0,302,'2020-12-03 05:11:46'),(17,'smoke',0,601,'2020-12-03 05:11:46'),(18,'smoke',0,602,'2020-12-03 05:11:47'),(19,'smoke',0,603,'2020-12-03 05:11:47'),(20,'Intrusion ',0,301,'2020-12-03 05:11:48'),(21,'Intrusion ',0,302,'2020-12-03 05:11:48'),(22,'Intrusion ',0,601,'2020-12-03 05:11:49'),(23,'Intrusion ',0,602,'2020-12-03 05:11:49'),(24,'Intrusion ',0,603,'2020-12-03 05:11:50'),(25,'body temperature',37.3,101,'2021-01-21 05:30:52');
 /*!40000 ALTER TABLE `sensor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -203,7 +207,6 @@ CREATE TABLE `user` (
   `userlevel` tinyint unsigned NOT NULL DEFAULT '0',
   `idroom` int NOT NULL,
   PRIMARY KEY (`iduser`),
-  UNIQUE KEY `username_UNIQUE` (`username`),
   UNIQUE KEY `iduser_UNIQUE` (`iduser`),
   KEY `idroom_idx` (`idroom`),
   CONSTRAINT `user_idroom` FOREIGN KEY (`idroom`) REFERENCES `room` (`idroom`) ON UPDATE CASCADE
@@ -229,4 +232,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-21 11:03:45
+-- Dump completed on 2021-01-21 13:31:35
