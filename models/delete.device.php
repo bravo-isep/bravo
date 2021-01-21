@@ -73,7 +73,7 @@ if (!empty($res)) {
         $table.="<td>AC#{$value['idac_sys']}</td>";
         $table.="<td>AC</td>";
         $table.="<td>{$value['idroom']}</td>";
-        $table.="<td><button onclick='delete_device({$value['idac_sys']}, 1)'>Delete</button></td>";
+        $table.="<td><button class=\"delete\" onclick='delete_device({$value['idac_sys']}, 1)'>Delete</button></td>";
         $table.="</tr>";
     }
 }
@@ -94,7 +94,7 @@ if (!empty($res)) {
         $table.="<td>Light#{$value['idlighting_sys']}</td>";
         $table.="<td>light</td>";
         $table.="<td>{$value['idroom']}</td>";
-        $table.="<td><button onclick='delete_device({$value['idlighting_sys']}, 2)'>Delete</button></td>";
+        $table.="<td><button class=\"delete\" onclick='delete_device({$value['idlighting_sys']}, 2)'>Delete</button></td>";
         $table.="</tr>";
     }
 }
@@ -118,7 +118,7 @@ if (!empty($res)) {
         $table.="<td>Sensor#{$value['idsensor']}</td>";
         $table.="<td>{$value['type']}</td>";
         $table.="<td>{$value['idroom']}</td>";
-        $table.="<td><button onclick='delete_device({$value['idsensor']}, 3)'>Delete</button></td>";
+        $table.="<td><button class=\"delete\" onclick='delete_device({$value['idsensor']}, 3)'>Delete</button></td>";
         $table.="</tr>";
     }
 }
@@ -140,7 +140,7 @@ foreach ($res_room as $key=>$room)
                 $table.="<option value='{$room['idroom']}' >{$room['idroom']}</option>";
             }
 $table.="</select></td>
-<td><button onclick='add_device()'>Add</button></td>
+<td><button class=\"add\" onclick='add_device()'>Add</button></td>
 </tr></form>";
 echo $table;
 
