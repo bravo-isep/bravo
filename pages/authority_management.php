@@ -51,7 +51,7 @@
 					$table .= "<td>{$value['username']}</td>";
 					$table .= "<td>" . show_level($value['userlevel']) . "</td>";
 					$table .= "<td>{$value['idroom']}</td>";
-					$table .= "<td><button onclick='delete_user({$value['iduser']})'>Delete</button><td>";
+					$table .= "<td><button class=\"delete\" onclick='delete_user({$value['iduser']})'>Delete</button></td>";
 					$table .= "</tr>";
 				}
 			}
@@ -89,7 +89,7 @@
 							?>
 						</select>
 					</td>
-					<td><button type="button" onclick="add_user()"> Add </button></td>
+					<td><button type="button" class="add" onclick="add_user()"> Add </button></td>
 				</form>
 			</tr>
 		</table>
