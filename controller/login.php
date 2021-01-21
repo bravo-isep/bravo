@@ -4,7 +4,7 @@ include_once "../models/room.php";
 $users = getUser();
 $allIdUser = array_column($users, 'iduser');
 
-if (isset($_POST['user']) && isset($_POST['passwd']) && $_POST['user'] != null && $_POST['passwd'] != null) {
+if (isset($_POST['user']) && isset($_POST['passwd']) && $_POST['user'] != null && $_POST['passwd'] != null && $_SERVER["HTTP_REFERER"] = "http://localhost/bravo/pages/login.php") {
 
     $user = (int)$_POST['user'];
     $passwd = $_POST['passwd'];
