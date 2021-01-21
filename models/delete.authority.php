@@ -48,7 +48,7 @@ if (!empty($res)) {
 		$table.="<td>{$value['username']}</td>";
 		$table.="<td>".show_level($value['userlevel'])."</td>";
 		$table.="<td>{$value['idroom']}</td>";
-		$table.="<td><button onclick='delete_user({$value['iduser']})'>Delete</button><td>";
+		$table.="<td><button onclick='delete_user({$value['iduser']})'>Delete</button></td>";
 		$table.="</tr>";
 	}
 }

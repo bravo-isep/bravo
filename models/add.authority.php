@@ -3,7 +3,7 @@
 //the default password is "password"
 $iduser = $_POST['iduser'];
 $username = $_POST['username'];
-$password = "password";
+$password = "30274c47903bd1bac7633bbf09743149ebab805f";
 $userlevel = $_POST['userlevel'];
 $idroom = $_POST['idroom'];
 
@@ -50,7 +50,7 @@ if (!empty($res)) {
 		$table .= "<td>{$value['username']}</td>";
 		$table .= "<td>" . show_level($value['userlevel']) . "</td>";
 		$table .= "<td>{$value['idroom']}</td>";
-		$table .= "<td><button onclick='delete_user({$value['iduser']})'>Delete</button><td>";
+		$table .= "<td><button onclick='delete_user({$value['iduser']})'>Delete</button></td>";
 		$table .= "</tr>";
 	}
 }
