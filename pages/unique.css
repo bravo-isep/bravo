@@ -139,43 +139,43 @@
     margin: 8% 0% 0% 9.5%;
 }
 #menu_ac #ac_icon {
-    height: 30%;
+    height: 45%;
     margin: 0% 0% 0% 60%;
 }
 #menu_ac #picturebutton_onoff {
     position: fixed;
     height: 4%;
-    margin: 8% 0% 0% -4%;
+    margin: 8% 0% 0% -5.4%;
 }
 #menu_ac #picturebutton_am1 {
     position: fixed;
     height: 6%;
-    margin: 12% 0% 0% -23.5%;
+    margin: 12% 0% 0% -26%;
 }
 #menu_ac #picturebutton_am2 {
     position: fixed;
     height: 6%;
-    margin: 12% 0% 0% -20%;
+    margin: 12% 0% 0% -22.5%;
 }
 #menu_ac #picturebutton_am3 {
     position: fixed;
     height: 6%;
-    margin: 12% 0% 0% -16.5%;
+    margin: 12% 0% 0% -19%;
 }
 #menu_ac #picturebutton_aw1 {
     position: fixed;
     height: 6%;
-    margin: 12% 0% 0% -7.5%;
+    margin: 12% 0% 0% -9.3%;
 }
 #menu_ac #picturebutton_aw2 {
     position: fixed;
     height: 6%;
-    margin: 12% 0% 0% -4%;
+    margin: 12% 0% 0% -5.8%;
 }
 #menu_ac #picturebutton_aw3 {
     position: fixed;
     height: 6%;
-    margin: 12% 0% 0% -0.5%;
+    margin: 12% 0% 0% -2.3%;
 }
 
 #menu_light {
