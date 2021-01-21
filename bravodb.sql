@@ -135,61 +135,6 @@ INSERT INTO `lighting_sys` VALUES (200,0,50,50,601),(201,1,50,15,602),(202,1,37,
 UNLOCK TABLES;
 
 --
--- Table structure for table `meeting`
---
-
-DROP TABLE IF EXISTS `meeting`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `meeting` (
-  `idmeeting` int NOT NULL,
-  `idroom` int NOT NULL,
-  `time_start` datetime NOT NULL,
-  `time_end` datetime NOT NULL,
-  PRIMARY KEY (`idmeeting`),
-  KEY `meeting_idroom_idx` (`idroom`),
-  CONSTRAINT `meeting_idroom` FOREIGN KEY (`idroom`) REFERENCES `room` (`idroom`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `meeting`
---
-
-LOCK TABLES `meeting` WRITE;
-/*!40000 ALTER TABLE `meeting` DISABLE KEYS */;
-/*!40000 ALTER TABLE `meeting` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `meeting_user`
---
-
-DROP TABLE IF EXISTS `meeting_user`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `meeting_user` (
-  `idmeeting_user` int NOT NULL,
-  `idmeeting` int NOT NULL,
-  `iduser` int NOT NULL,
-  PRIMARY KEY (`idmeeting_user`),
-  KEY `meeting_user_idmeeting_idx` (`idmeeting`),
-  KEY `meeting_user_iduser_idx` (`iduser`),
-  CONSTRAINT `meeting_user_idmeeting` FOREIGN KEY (`idmeeting`) REFERENCES `meeting` (`idmeeting`),
-  CONSTRAINT `meeting_user_iduser` FOREIGN KEY (`iduser`) REFERENCES `user` (`iduser`) ON DELETE RESTRICT ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `meeting_user`
---
-
-LOCK TABLES `meeting_user` WRITE;
-/*!40000 ALTER TABLE `meeting_user` DISABLE KEYS */;
-/*!40000 ALTER TABLE `meeting_user` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `room`
 --
 
@@ -240,7 +185,7 @@ CREATE TABLE `sensor` (
 
 LOCK TABLES `sensor` WRITE;
 /*!40000 ALTER TABLE `sensor` DISABLE KEYS */;
-INSERT INTO `sensor` VALUES (0,'temperature',14.2,301,'2021-01-21 02:56:51'),(1,'temperature',26.5,302,'2021-01-21 02:56:51'),(2,'temperature',24.4,601,'2021-01-21 02:56:51'),(3,'temperature',13.3,602,'2021-01-21 02:56:51'),(4,'temperature',26.7,603,'2021-01-21 02:56:51'),(5,'humidity',50,301,'2021-01-21 02:56:51'),(6,'humidity',15.4,302,'2021-01-21 02:56:51'),(7,'humidity',84.6,601,'2021-01-21 02:56:51'),(8,'humidity',17.9,602,'2021-01-21 02:56:51'),(9,'humidity',29.7,603,'2021-01-21 02:56:51'),(10,'brightness',81.3,301,'2021-01-21 02:56:51'),(11,'brightness',9.1,302,'2021-01-21 02:56:51'),(12,'brightness',68.2,601,'2021-01-21 02:56:51'),(13,'brightness',84,602,'2021-01-21 02:56:51'),(14,'brightness',90.6,603,'2021-01-21 02:56:51'),(15,'smoke',0,301,'2020-12-03 05:11:46'),(16,'smoke',0,302,'2020-12-03 05:11:46'),(17,'smoke',0,601,'2020-12-03 05:11:46'),(18,'smoke',0,602,'2020-12-03 05:11:47'),(19,'smoke',0,603,'2020-12-03 05:11:47'),(20,'Intrusion ',0,301,'2020-12-03 05:11:48'),(21,'Intrusion ',0,302,'2020-12-03 05:11:48'),(22,'Intrusion ',0,601,'2020-12-03 05:11:49'),(23,'Intrusion ',0,602,'2020-12-03 05:11:49'),(24,'Intrusion ',0,603,'2020-12-03 05:11:50'),(25,'body temperature',38.7,101,'2021-01-21 02:56:51');
+INSERT INTO `sensor` VALUES (0,'temperature',34.6,301,'2021-01-21 03:02:51'),(1,'temperature',25.5,302,'2021-01-21 03:02:51'),(2,'temperature',26.3,601,'2021-01-21 03:02:51'),(3,'temperature',31.2,602,'2021-01-21 03:02:51'),(4,'temperature',36.7,603,'2021-01-21 03:02:51'),(5,'humidity',53.8,301,'2021-01-21 03:02:51'),(6,'humidity',66.2,302,'2021-01-21 03:02:51'),(7,'humidity',51.7,601,'2021-01-21 03:02:51'),(8,'humidity',59.1,602,'2021-01-21 03:02:51'),(9,'humidity',43,603,'2021-01-21 03:02:51'),(10,'brightness',96.8,301,'2021-01-21 03:02:51'),(11,'brightness',71.4,302,'2021-01-21 03:02:51'),(12,'brightness',92.7,601,'2021-01-21 03:02:51'),(13,'brightness',3.9,602,'2021-01-21 03:02:51'),(14,'brightness',35,603,'2021-01-21 03:02:51'),(15,'smoke',0,301,'2020-12-03 05:11:46'),(16,'smoke',0,302,'2020-12-03 05:11:46'),(17,'smoke',0,601,'2020-12-03 05:11:46'),(18,'smoke',0,602,'2020-12-03 05:11:47'),(19,'smoke',0,603,'2020-12-03 05:11:47'),(20,'Intrusion ',0,301,'2020-12-03 05:11:48'),(21,'Intrusion ',0,302,'2020-12-03 05:11:48'),(22,'Intrusion ',0,601,'2020-12-03 05:11:49'),(23,'Intrusion ',0,602,'2020-12-03 05:11:49'),(24,'Intrusion ',0,603,'2020-12-03 05:11:50'),(25,'body temperature',38,101,'2021-01-21 03:02:51');
 /*!40000 ALTER TABLE `sensor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -284,4 +229,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-21 10:57:12
+-- Dump completed on 2021-01-21 11:03:45
