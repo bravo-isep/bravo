@@ -9,9 +9,9 @@ window.onload = function () {
         success: function (resp) {
             if (resp.flag === 1) {
                 employeeName = resp.userName;
-                employeeNumber = resp.idUser;
-                authorityLevel = resp.userLevel;
-                employeeRoom = resp.userIdRoom; //1:Employee 2:Manager 3:Administrator
+                employeeNumber = Number(resp.idUser);
+                authorityLevel = Number(resp.userLevel);
+                employeeRoom = Number(resp.userIdRoom); //1:Employee 2:Manager 3:Administrator
                 console.log(employeeName, employeeNumber, authorityLevel, employeeRoom);
                 getSensor(employeeRoom);
                 getDevice(employeeRoom);
@@ -36,9 +36,9 @@ function getSensor(idRoom) {
         },
         dataType: "json",
         success: function (resp) {
-            temperature = resp.temperature;
-            humidity = resp.humidity;
-            brightness = resp.brightness;
+            temperature = Number(resp.temperature);
+            humidity = Number(resp.humidity);
+            brightness = Number(resp.brightness);
             // console.log(temperature, humidity, brightness);
         },
         error: function (err) {
@@ -57,13 +57,13 @@ function getDevice(idRoom) {
         },
         dataType: "json",
         success: function (resp) {
-            ac_is_on = resp.AC_OnOff;
-            ac_temperature = resp.AC_temp;
-            ac_wind = resp.AC_fan;
-            ac_mode = resp.AC_mode;
-            light_is_on = resp.Light_OnOff;
-            light_intensity = resp.Light_bri;
-            curtain_position = resp.Curtain_position;
+            ac_is_on = Number(resp.AC_OnOff);
+            ac_temperature = Number(resp.AC_temp);
+            ac_wind = Number(resp.AC_fan);
+            ac_mode = Number(resp.AC_mode);
+            light_is_on = Number(resp.Light_OnOff);
+            light_intensity = Number(resp.Light_bri);
+            curtain_position = Number(resp.Curtain_position);
             setTimeout(ac_showTemperature(),1000);
 
             // console.log(
