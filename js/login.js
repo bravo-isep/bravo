@@ -20,6 +20,7 @@ function check(user, passwd) {
         dataType: "json",
         success: function (resp) {
             console.log("success：", resp);
+            // console.log(user,passwd_sha1);
             if (resp.success == "1") {
                 var room = resp.idRoom;
                 $("#output").text("success").prop("class", "span_green");
@@ -31,7 +32,6 @@ function check(user, passwd) {
                     saveCookie(user, room, passwd, 0);
                 }
                 window.location.href = "../index.php";
-                exit;
             } else {
                 $("#output").text(resp.message).prop("class", "span_red");
             }
