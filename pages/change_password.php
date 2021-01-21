@@ -10,6 +10,7 @@
 		function checkSame(obj) {
 			var new_password = document.getElementById("new_password");
 			if (new_password.value != obj.value) {
+				document.getElementById("changePassword").style.cssText = "opacity: 0.6; cursor: not-allowed;";
 				obj.style.cssText = "border-color:red; color:red;";
 			}
 			else if (new_password.value == obj.value) {
