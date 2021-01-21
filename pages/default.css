@@ -92,12 +92,17 @@ body{
 	float:left;
 	margin-right: 5%;
 }
+#table_block{
+	width: 60%;
+	max-height: 20vw;
+	margin-left: 19%;
+    overflow-y: scroll;
+}
 table{
+	width: 100%;
 	font-size: 100%;
 	border: none;
 	color: black;
-	width: 60%;
-	margin-left: 19%;
 }
 td{
 	height: 30px;
