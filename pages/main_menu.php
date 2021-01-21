@@ -67,6 +67,18 @@
 			<li>[10/09/2020]The office has been disinfected today.</li>
 			<li>[10/09/2020]The office has been disinfected today.</li>
 			<li>[09/09/2020]The office has been disinfected today.</li>
+			<li>[13/09/2020]The office has been disinfected today.</li>
+			<li>[12/09/2020]The office has been disinfected today.</li>
+			<li>[11/09/2020]The office has been disinfected today.</li>
+			<li>[10/09/2020]The office has been disinfected today.</li>
+			<li>[10/09/2020]The office has been disinfected today.</li>
+			<li>[09/09/2020]The office has been disinfected today.</li>
+			<li>[13/09/2020]The office has been disinfected today.</li>
+			<li>[12/09/2020]The office has been disinfected today.</li>
+			<li>[11/09/2020]The office has been disinfected today.</li>
+			<li>[10/09/2020]The office has been disinfected today.</li>
+			<li>[10/09/2020]The office has been disinfected today.</li>
+			<li>[09/09/2020]The office has been disinfected today.</li>
 		</ul>
 	</div>
 	<div class="button" id="menu_light" style="float:left" onclick="setPage('./pages/light_control.php','Light',$.cookie('idRoom'))">

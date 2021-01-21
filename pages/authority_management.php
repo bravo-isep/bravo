@@ -16,7 +16,7 @@
 		<div class="buttonText2">Management</div>
 	</div>
 	<div id="table">
-		<table border="1">
+		<table>
 			<tr>
 				<td>EMPLOYEE NUMBER</td>
 				<td>USERNAME</td>
