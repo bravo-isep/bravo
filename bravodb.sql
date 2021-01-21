@@ -44,7 +44,7 @@ CREATE TABLE `ac_sys` (
 
 LOCK TABLES `ac_sys` WRITE;
 /*!40000 ALTER TABLE `ac_sys` DISABLE KEYS */;
-INSERT INTO `ac_sys` VALUES (101,0,26,1,1,601),(102,1,23,2,2,602),(103,1,17,3,3,603),(104,1,26,1,2,301),(105,0,28,2,3,302);
+INSERT INTO `ac_sys` VALUES (101,0,26,1,1,601),(102,1,23,2,2,602),(103,1,17,1,1,603),(104,1,26,1,2,301),(105,0,28,2,3,302);
 /*!40000 ALTER TABLE `ac_sys` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -72,6 +72,7 @@ CREATE TABLE `alarm` (
 
 LOCK TABLES `alarm` WRITE;
 /*!40000 ALTER TABLE `alarm` DISABLE KEYS */;
+INSERT INTO `alarm` VALUES (0,'Fire',15,'2020-01-21 00:00:00'),(1,'Invade',20,'2020-01-21 00:00:00'),(2,'Test',16,'2020-01-21 00:00:00');
 /*!40000 ALTER TABLE `alarm` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -103,7 +104,7 @@ CREATE TABLE `body_temperature_detection` (
 
 LOCK TABLES `body_temperature_detection` WRITE;
 /*!40000 ALTER TABLE `body_temperature_detection` DISABLE KEYS */;
-INSERT INTO `body_temperature_detection` VALUES (0,25,0,36.2,'2021-01-20 08:03:00'),(1,25,1,37.3,'2021-01-20 09:03:00'),(2,25,2,39.8,'2021-01-20 09:09:00');
+INSERT INTO `body_temperature_detection` VALUES (0,25,123,36.2,'2021-01-20 08:03:00'),(1,25,124,37.3,'2021-01-20 09:03:00'),(2,25,125,39.8,'2021-01-20 09:09:00');
 /*!40000 ALTER TABLE `body_temperature_detection` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -133,7 +134,7 @@ CREATE TABLE `lighting_sys` (
 
 LOCK TABLES `lighting_sys` WRITE;
 /*!40000 ALTER TABLE `lighting_sys` DISABLE KEYS */;
-INSERT INTO `lighting_sys` VALUES (200,0,50,50,601),(201,1,50,15,602),(202,1,37,43,603),(203,1,68,34,301),(204,0,29,78,302);
+INSERT INTO `lighting_sys` VALUES (200,0,50,50,601),(201,1,50,15,602),(202,1,56,43,603),(203,1,68,34,301),(204,0,29,78,302);
 /*!40000 ALTER TABLE `lighting_sys` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -189,7 +190,7 @@ CREATE TABLE `sensor` (
 
 LOCK TABLES `sensor` WRITE;
 /*!40000 ALTER TABLE `sensor` DISABLE KEYS */;
-INSERT INTO `sensor` VALUES (0,'temperature',34.2,301,'2021-01-21 05:30:52'),(1,'temperature',33.6,302,'2021-01-21 05:30:52'),(2,'temperature',18.1,601,'2021-01-21 05:30:52'),(3,'temperature',25.9,602,'2021-01-21 05:30:52'),(4,'temperature',16.1,603,'2021-01-21 05:30:52'),(5,'humidity',29.5,301,'2021-01-21 05:30:52'),(6,'humidity',78.6,302,'2021-01-21 05:30:52'),(7,'humidity',46.2,601,'2021-01-21 05:30:52'),(8,'humidity',23.9,602,'2021-01-21 05:30:52'),(9,'humidity',44.1,603,'2021-01-21 05:30:52'),(10,'brightness',41.8,301,'2021-01-21 05:30:52'),(11,'brightness',44.9,302,'2021-01-21 05:30:52'),(12,'brightness',33.9,601,'2021-01-21 05:30:52'),(13,'brightness',58.7,602,'2021-01-21 05:30:52'),(14,'brightness',11.4,603,'2021-01-21 05:30:52'),(15,'smoke',0,301,'2020-12-03 05:11:46'),(16,'smoke',0,302,'2020-12-03 05:11:46'),(17,'smoke',0,601,'2020-12-03 05:11:46'),(18,'smoke',0,602,'2020-12-03 05:11:47'),(19,'smoke',0,603,'2020-12-03 05:11:47'),(20,'Intrusion ',0,301,'2020-12-03 05:11:48'),(21,'Intrusion ',0,302,'2020-12-03 05:11:48'),(22,'Intrusion ',0,601,'2020-12-03 05:11:49'),(23,'Intrusion ',0,602,'2020-12-03 05:11:49'),(24,'Intrusion ',0,603,'2020-12-03 05:11:50'),(25,'body temperature',37.3,101,'2021-01-21 05:30:52');
+INSERT INTO `sensor` VALUES (0,'temperature',17,301,'2021-01-21 09:21:52'),(1,'temperature',26.4,302,'2021-01-21 09:21:52'),(2,'temperature',27.3,601,'2021-01-21 09:21:52'),(3,'temperature',16.2,602,'2021-01-21 09:21:52'),(4,'temperature',23.4,603,'2021-01-21 09:21:52'),(5,'humidity',34,301,'2021-01-21 09:21:52'),(6,'humidity',79.7,302,'2021-01-21 09:21:52'),(7,'humidity',52.5,601,'2021-01-21 09:21:52'),(8,'humidity',73.5,602,'2021-01-21 09:21:52'),(9,'humidity',37.9,603,'2021-01-21 09:21:52'),(10,'brightness',45.9,301,'2021-01-21 09:21:52'),(11,'brightness',84.7,302,'2021-01-21 09:21:52'),(12,'brightness',12.3,601,'2021-01-21 09:21:52'),(13,'brightness',54,602,'2021-01-21 09:21:52'),(14,'brightness',56.1,603,'2021-01-21 09:21:52'),(15,'smoke',0,301,'2020-12-03 05:11:46'),(16,'smoke',0,302,'2020-12-03 05:11:46'),(17,'smoke',0,601,'2020-12-03 05:11:46'),(18,'smoke',0,602,'2020-12-03 05:11:47'),(19,'smoke',0,603,'2020-12-03 05:11:47'),(20,'Intrusion ',0,301,'2020-12-03 05:11:48'),(21,'Intrusion ',0,302,'2020-12-03 05:11:48'),(22,'Intrusion ',0,601,'2020-12-03 05:11:49'),(23,'Intrusion ',0,602,'2020-12-03 05:11:49'),(24,'Intrusion ',0,603,'2020-12-03 05:11:50'),(25,'body temperature',39.3,101,'2021-01-21 09:21:52');
 /*!40000 ALTER TABLE `sensor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -219,7 +220,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (0,'employee','30274c47903bd1bac7633bbf09743149ebab805f',1,601),(1,'manager','30274c47903bd1bac7633bbf09743149ebab805f',2,602),(2,'administrator','30274c47903bd1bac7633bbf09743149ebab805f',3,603);
+INSERT INTO `user` VALUES (123,'employee','30274c47903bd1bac7633bbf09743149ebab805f',1,601),(124,'manager','30274c47903bd1bac7633bbf09743149ebab805f',2,602),(125,'administrator','30274c47903bd1bac7633bbf09743149ebab805f',3,603);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -232,4 +233,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-01-21 13:31:35
+-- Dump completed on 2021-01-21 17:22:16
