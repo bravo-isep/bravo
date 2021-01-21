@@ -54,9 +54,9 @@ function getUserPassword($userId)
 {
     global $db;
     $sth = $db->prepare('SELECT password FROM user WHERE iduser = ?');
-    $sth->execute(array($userId));
+    $sth->bindParam(1, $userId, PDO::PARAM_INT,8);
+    $sth->execute();
     $UserPassword = $sth->fetchAll(PDO::FETCH_ASSOC);
     $sth = null;
     return $UserPassword[0]['password'];
 }
-

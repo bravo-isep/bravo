@@ -6,7 +6,7 @@ $allIdUser = array_column($users, 'iduser');
 
 if (isset($_POST['user']) && isset($_POST['passwd']) && $_POST['user'] != null && $_POST['passwd'] != null) {
 
-    $user = $_POST['user'];
+    $user = (int)$_POST['user'];
     $passwd = $_POST['passwd'];
     // Save all user Data
     if (in_array($user, $allIdUser)) {

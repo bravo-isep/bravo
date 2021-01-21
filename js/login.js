@@ -10,6 +10,7 @@ function check(user, passwd) {
     } else {
         passwd_sha1 = "";
     }
+
     $.ajax({
         type: "POST",
         url: "../controller/login.php",
@@ -19,8 +20,6 @@ function check(user, passwd) {
         },
         dataType: "json",
         success: function (resp) {
-            console.log("success：", resp);
-            // console.log(user,passwd_sha1);
             if (resp.success == "1") {
                 var room = resp.idRoom;
                 $("#output").text("success").prop("class", "span_green");
