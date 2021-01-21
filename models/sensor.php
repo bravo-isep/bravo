@@ -45,3 +45,13 @@ function getSmoke($idRoom)
     return $res[0]['smoke'];
 }
 
+function getSensorRoom($idSensor)
+{
+    global $db;
+    $sth = $db->prepare('SELECT idroom FROM sensor WHERE idSensor = :idSensor');
+    $sth->bindParam(':idSensor', $idSensor, PDO::PARAM_INT,20);
+    $sth->execute();
+    $sensor = $sth->fetchAll(PDO::FETCH_ASSOC);
+    $sth = null;
+    return $sensor[0]['idroom'];
+}
