@@ -4,7 +4,7 @@ include_once "../models/room.php";
 $users = getUser();
 $allIdUser = array_column($users, 'iduser');
 
-if (isset($_POST['user']) && isset($_POST['passwd'])) {
+if (isset($_POST['user']) && isset($_POST['passwd']) && $_POST['user'] != null && $_POST['passwd'] != null) {
 
     $user = $_POST['user'];
     $passwd = $_POST['passwd'];
@@ -12,7 +12,7 @@ if (isset($_POST['user']) && isset($_POST['passwd'])) {
     if (in_array($user, $allIdUser)) {
         if (getUserPassword($user) === $passwd) {
             $idRoom = getUserRoom($user);
-            echo json_encode(array('success' => 1,'idRoom' =>$idRoom));
+            echo json_encode(array('success' => 1, 'idRoom' => $idRoom));
             session_start();
             $_SESSION['isLogin'] = true;
             $_SESSION["idUser"] = $user;
