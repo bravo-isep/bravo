@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<title>Bravo Smart Office</title>
 	<script>
-		window.location.href="../index.php"
+		window.location.href = "../index.php"
 	</script>
 
 </head>
@@ -41,23 +41,27 @@
 		<div class="buttonText1">Energy</div>
 		<div class="buttonText2">55kWh</div>
 	</button>
-	<div class="button" id="menu_ac" style="float:left" onclick="setPage('./pages/ac_control.php','Air Conditioner',$.cookie('idRoom'))">
-		<div id="ac_text1">Air Conditioner</div>
-		<div id="ac_text2">Temperature</div>
-		<div id="temperature"></div>
 
-		<img src="./image/+.png" id="picturebutton_up" onclick="ac_temperatureUp();ac_showTemperature();clickBtn(event)">
-		<img src="./image/-.png" id="picturebutton_down" onclick="ac_temperatureDown();ac_showTemperature();clickBtn(event)">
-		<img src="./image/airconditioner.png" id="ac_icon" />
-		<img src="./image/onoff.png" id="picturebutton_onoff" onclick="ac_switch();ac_showTemperature();clickBtn(event)">
+	<?php
+	echo ("
+	<div class=\"button\" id=\"menu_ac\" style=\"float:left\" onclick=\"setPage('./pages/ac_control.php','Air Conditioner',$.cookie('$idRoom'))\">
+		<div id=\"ac_text1\">Air Conditioner</div>
+		<div id=\"ac_text2\">Temperature</div>
+		<div id=\"temperature\"></div>
 
-		<img src="./image/acmode1.png" id="picturebutton_am1" onclick="ac_modeChange(1);clickBtn(event)">
-		<img src="./image/acmode2.png" id="picturebutton_am2" onclick="ac_modeChange(2);clickBtn(event)">
-		<img src="./image/acmode3.png" id="picturebutton_am3" onclick="ac_modeChange(3);clickBtn(event)">
-		<img src="./image/acspeed1.png" id="picturebutton_aw1" onclick="ac_windChange(1);clickBtn(event)">
-		<img src="./image/acspeed2.png" id="picturebutton_aw2" onclick="ac_windChange(2);clickBtn(event)">
-		<img src="./image/acspeed3.png" id="picturebutton_aw3" onclick="ac_windChange(3);clickBtn(event)">
-	</div>
+		<img src=\"./image/+.png\" id=\"picturebutton_up\" onclick=\"ac_temperatureUp($idRoom);ac_showTemperature($idRoom);clickBtn(event)\">
+		<img src=\"./image/-.png\" id=\"picturebutton_down\" onclick=\"ac_temperatureDown($idRoom);ac_showTemperature($idRoom);clickBtn(event)\">
+		<img src=\"./image/airconditioner.png\" id=\"ac_icon\" />
+		<img src=\"./image/onoff.png\" id=\"picturebutton_onoff\" onclick=\"ac_switch($idRoom);ac_showTemperature($idRoom);clickBtn(event)\">
+
+		<img src=\"./image/acmode1.png\" id=\"picturebutton_am1\" onclick=\"ac_modeChange(1,$idRoom);clickBtn(event)\">
+		<img src=\"./image/acmode2.png\" id=\"picturebutton_am2\" onclick=\"ac_modeChange(2,$idRoom);clickBtn(event)\">
+		<img src=\"./image/acmode3.png\" id=\"picturebutton_am3\" onclick=\"ac_modeChange(3,$idRoom);clickBtn(event)\">
+		<img src=\"./image/acspeed1.png\" id=\"picturebutton_aw1\" onclick=\"ac_windChange(1,$idRoom);clickBtn(event)\">
+		<img src=\"./image/acspeed2.png\" id=\"picturebutton_aw2\" onclick=\"ac_windChange(2,$idRoom);clickBtn(event)\">
+		<img src=\"./image/acspeed3.png\" id=\"picturebutton_aw3\" onclick=\"ac_windChange(3,$idRoom);clickBtn(event)\">
+	</div>");
+	?>
 	<div class="button" id="menu_notice" style="float:left">
 		<div>Notice</div>
 		<ul>

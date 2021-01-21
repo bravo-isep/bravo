@@ -1,5 +1,14 @@
-function sendAlarm() {
+function sendAlarm(idRoom) {
     alert("Alarm"); //change this into sending an alarm to server
+    var addtr = $(
+        "<tr>" +
+            "<td> time </td>" +
+            "<td>idsensor</td>" +
+            "<td>type</td>" +
+            "<td>Room </td>" +
+            "</tr>"
+    );
+    addtr.appendTo($('#alarmTable'));
 }
 
 function reportIllness() {
