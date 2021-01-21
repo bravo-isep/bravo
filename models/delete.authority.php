@@ -48,7 +48,7 @@ if (!empty($res)) {
 		$table.="<td>{$value['username']}</td>";
 		$table.="<td>".show_level($value['userlevel'])."</td>";
 		$table.="<td>{$value['idroom']}</td>";
-		$table.="<td><button onclick='delete_user({$value['iduser']})'>Delete</button><td>";
+		$table.="<td><button class=\"delete\" onclick='delete_user({$value['iduser']})'>Delete</button></td>";
 		$table.="</tr>";
 	}
 }
@@ -81,7 +81,7 @@ foreach ($res_room as $key=>$room)
 }
 $table.="</select>
 </td>
-<td><button type='button' onclick='add_user()'> Add </button></td>
+<td><button class=\"add\" type='button' onclick='add_user()'> Add </button></td>
 </form>
 </tr>
 </table>";
