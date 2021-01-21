@@ -3,46 +3,43 @@
 //the default password is "password"
 $iduser = $_POST['iduser'];
 $username = $_POST['username'];
-$password="password";
+$password = "30274c47903bd1bac7633bbf09743149ebab805f";
 $userlevel = $_POST['userlevel'];
 $idroom = $_POST['idroom'];
 
-try{
-    header('Content-type:text/html;charset=utf-8');
-    include_once("connect.php");
-    $db = connect();
+try {
+	header('Content-type:text/html;charset=utf-8');
+	include_once("connect.php");
+	$db = connect();
 
-    $sql = "INSERT INTO user (iduser, username, password, userlevel, idroom)
+	$sql = "INSERT INTO user (iduser, username, password, userlevel, idroom)
     VALUES ('$iduser', '$username', '$password', '$userlevel', '$idroom')";
 
-    $db->exec($sql);
-    
-}catch(PDOException $e){
-    echo "Error: " . $e->getMessage();
+	$db->exec($sql);
+} catch (PDOException $e) {
+	echo "Error: " . $e->getMessage();
 }
 
 
-$table='';
-$table.="<table border='1'>";
-$table.="<tr><td>EMPLOYEE NUMBER</td><td>USERNAME</td>
+$table = '';
+$table .= "<table border='1'>";
+$table .= "<tr><td>EMPLOYEE NUMBER</td><td>USERNAME</td>
 <td>AUTHORITY</td><td>ROOM</td><td>MANAGEMENT</td></tr>";
 
 
-	//connecting the database
+//connecting the database
 //read the 'user' table and add the data to table 
-try{
+try {
 	header('Content-type:text/html;charset=utf-8');
 
-	$stmt = $db -> prepare("SELECT * FROM user"); 
+	$stmt = $db->prepare("SELECT * FROM user");
 	$stmt->execute();
-	$stmt_room = $db -> prepare("SELECT * FROM room");
+	$stmt_room = $db->prepare("SELECT * FROM room");
 	$stmt_room->execute();
 
-	$res = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+	$res = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	$res_room = $stmt_room->fetchAll(PDO::FETCH_ASSOC);
-
-	
-}catch(PDOException $e){
+} catch (PDOException $e) {
 	echo "Error: " . $e->getMessage();
 }
 
@@ -55,36 +52,36 @@ if (!empty($res)) {
 		$table.="<td>{$value['idroom']}</td>";
 		$table.="<td><button class=\"delete\" onclick='delete_user({$value['iduser']})'>Delete</button></td>";
 		$table.="</tr>";
+
 	}
 }
 
-function show_level($userlevel){
-	if($userlevel == 1){
+function show_level($userlevel)
+{
+	if ($userlevel == 1) {
 		return 'Employee';
 	}
-	if($userlevel == 2){
+	if ($userlevel == 2) {
 		return 'Manager';
 	}
 	return 'Administrator';
 }
-$table.="<tr><form action='./models/add.authority.php' method='POST'>
+$table .= "<tr><form action='./models/add.authority.php' method='POST'>
 <td><input type='text' id='iduser'></td><td><input type='text' id='username'></td>";
-$table.="<td><select name='userlevel' id='userlevel'>
+$table .= "<td><select name='userlevel' id='userlevel'>
 <option value ='1'>Empleyee</option>
 <option value ='2'>Manager</option>
 <option value ='3'>Administrator</option>
 </select>
 </td>
 <td>
-<select name='idroom' id='idroom'>"
-;
+<select name='idroom' id='idroom'>";
 
-foreach ($res_room as $key=>$room)
-{
-	$table.=
-	"<option value = '{$room['idroom']}' >{$room['idroom']}</option>";
+foreach ($res_room as $key => $room) {
+	$table .=
+		"<option value = '{$room['idroom']}' >{$room['idroom']}</option>";
 }
-$table.="</select>
+$table .= "</select>
 </td>
 <td><button class=\"add\" type='button' onclick='add_user()'> Add </button></td>
 </form>
@@ -92,4 +89,3 @@ $table.="</select>
 </table>";
 
 echo $table;
-?>

@@ -16,6 +16,9 @@ window.onload = function () {
                 getSensor(employeeRoom);
                 getDevice(employeeRoom);
                 setPage("./pages/main_menu.php", "Menu", $.cookie("idRoom"), employeeName);
+                if (authorityLevel == 1) {
+                    $('#side_menu_button').hide();
+                }
             } else {
                 console.log("getUser failed");
             }

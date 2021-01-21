@@ -57,7 +57,7 @@ if ($_SESSION["isLogin"] != true) {
         <button class="side_menu_button" type="button" onclick="setPage('./pages/room_select.php','Light','0')"><img src="./image/light.png" />Light</button><br>
         <button class="side_menu_button" type="button" onclick="setPage('./pages/room_select.php','Security','0')"><img src="./image/security.png" />Security</button><br>
         <button class="side_menu_button" type="button" onclick="setPage('./pages/health.php','Health','0')"><img src="./image/health.png" />Health</button><br>
-        <button class="side_menu_button" type="button" onclick="setPage('./pages/manage.php','Manage','0')"><img src="./image/manage.png" />Manage</button>
+        <button class="side_menu_button" type="button" id="side_menu_button" onclick="setPage('./pages/manage.php','Manage','0')"><img src="./image/manage.png" />Manage</button>
         <!--this button won't show if authorityLevel is 1-->
     </div>
 
