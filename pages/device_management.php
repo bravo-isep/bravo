@@ -16,8 +16,8 @@
 		<div class="buttonText2">Device</div>
 		<div class="buttonText2">Management</div>
 	</div>
-	<div id="table">
-		<table>
+	<div id="table_block">
+		<table id="table">
 			<?php
 			$table = '';
 			$table .= "<tr>

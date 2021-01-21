@@ -27,8 +27,8 @@ $sensors = $utilityFunction ->getSensors();
 		<div class="buttonText1">click here to</div>
 		<div class="buttonText2">ALARM!</div>
 	</button>
-	<div id="table">
-		<table>
+	<div id="table_block">
+		<table id="table">
 			<tr>
 				<td>DATE(DD/MM/YYYY)</td>
 				<td>MONITOR DATA</td>

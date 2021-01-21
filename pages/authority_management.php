@@ -15,8 +15,8 @@
 		<div class="buttonText2">Authority</div>
 		<div class="buttonText2">Management</div>
 	</div>
-	<div id="table">
-		<table>
+	<div id="table_block">
+		<table id="table">
 			<tr>
 				<td>EMPLOYEE NUMBER</td>
 				<td>USERNAME</td>
@@ -74,7 +74,7 @@
 					<td><input type="text" id="username"></td>
 					<td>
 						<select name="userlevel" id="userlevel">
-							<option value="1">Empleyee</option>
+							<option value="1">Employee</option>
 							<option value="2">Manager</option>
 							<option value="3">Administrator</option>
 						</select>

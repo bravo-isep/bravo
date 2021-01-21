@@ -27,8 +27,8 @@
 		<div class="buttonText1">report</div>
 		<div class="buttonText2">illness</div>
 	</button>
-	<div id="table">
-		<table>
+	<div id="table_block">
+		<table id="table">
 			<!--Don't let those Level-1 see this table-->
 			<tr>
 				<td>DATE(DD/MM/YYYY)</td>
